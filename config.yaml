@@ -34,11 +34,11 @@ submodels:
 # Misc
 stacksize: unlimited
 collate:
-	walltime: 2:00:00
-	queue: copyq
-	ncpus: 1
-	flags: -n4 -z -m -r
-	mem: 30GB
+      walltime: 2:00:00
+      queue: copyq
+      ncpus: 1
+      flags: -n4 -z -m -r
+      mem: 30GB
 mpirun: --mca orte_base_help_aggregate 0
 qsub_flags: -lother=hyperthread -W umask=027
 postscript: sync_output_to_gdata.sh
