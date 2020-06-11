@@ -3,7 +3,7 @@
 #PBS -l ncpus=1
 #PBS -l wd
 #PBS -l walltime=4:00:00,mem=4GB
-#PBS -l storage=gdata/hh5+gdata/ik11+scratch/v45
+#PBS -l storage=gdata/hh5+gdata/ik11+scratch/v45+scratch/e14
 #PBS -N sync
 
 # Set SYNCDIR to the path you want your data copied to.
@@ -11,7 +11,7 @@
 # To share your data, sync to a subdirectory in /g/data/ik11/outputs/
 # but first add an experiment description - see /g/data/ik11/outputs/README
 # DOUBLE-CHECK SYNCDIR PATH IS UNIQUE SO YOU DON'T OVERWRITE EXISTING OUTPUT!
-SYNCDIR=/ERROR/SET/SYNCDIR/IN/sync_data.sh
+SYNCDIR=/g/data/ik11/outputs/access-om2-025/025deg_jra55_iaf_omip/
 
 exitcode=0
 help=false
