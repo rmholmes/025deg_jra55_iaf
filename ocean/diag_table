@@ -560,8 +560,8 @@ ACCESS-OM2
 
 # Monthly squared velocity fields:
  "ocean_model", "vert_pv", "vert_pv", "ocean_month", "all", .true., "none", 2
- "ocean_model", "u", "u", "ocean_month", "all", "pow02", "none", 2
- "ocean_model", "v", "v", "ocean_month", "all", "pow02", "none", 2
+ "ocean_model", "u", "usq", "ocean_month", "all", "pow02", "none", 2
+ "ocean_model", "v", "vsq", "ocean_month", "all", "pow02", "none", 2
 
 # Daily surface/bottom quantities:
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
