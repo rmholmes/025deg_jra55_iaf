@@ -23,9 +23,6 @@ ACCESS-OM2
 # These are only requested at annual resolution. They will be output at monthly resolution over the
 # last cycle.
 
-# RMH: We should make sure that the list below also contains all of the
-# standard ACCESS-OM2 diagnostics in the list Andrew has put together.
-
 # RMH: There is no information below on how to translate these
 # diagnostics into the CMIP output format. E.g. what variable
 # corresponds to what standard CMIP6/OMIP6 variable name
@@ -37,8 +34,7 @@ ACCESS-OM2
 # mh_flux to the code a week ago - which must mean that the ACCESS-CM2
 # CMIP6 submission is missing that diagnostic).
 
-# RMH: How are the sea ice diagnostics treated in CMIP6/OMIP6? What
-# sea-ice diagnostics should we be outputting?
+# RMH: Sea-ice diagnostics are standard ACCESS-OM2 output.
 
 #==========================================================================
 # Static diagnostics (including Griffies et al. Table G1)
