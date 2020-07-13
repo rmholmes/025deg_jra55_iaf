@@ -559,7 +559,7 @@ ACCESS-OM2
  "ocean_model","bmf_v","bmf_v"                      ,"ocean_month","all",.true.,"none",2
 
 # Monthly squared velocity fields:
- "ocean_model", "vert_pv", "vert_pv", "ocean-3d-vert_pv-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+ "ocean_model", "vert_pv", "vert_pv", "ocean_month", "all", .true., "none", 2
  "ocean_model", "u", "u", "ocean_month", "all", "pow02", "none", 2
  "ocean_model", "v", "v", "ocean_month", "all", "pow02", "none", 2
 
