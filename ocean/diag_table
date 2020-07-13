@@ -137,19 +137,19 @@ ACCESS-OM2
 # 
 # Rosetta stone: sst=sea_surface_temperature (monthly)
  "ocean_model","surface_temp","sst"  ,"ocean_month","all",.true.,"none",2
- "ocean_model","surface_pot_temp","sst"  "ocean_month","all",.true.,"none",2
+ "ocean_model","surface_pot_temp","sspt"  "ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sst=sea_surface_temperature  (daily)
  "ocean_model","surface_temp","sst"  ,"ocean_daily","all",.true.,"none",2
- "ocean_model","surface_pot_temp","sst"  ,"ocean_daily","all",.true.,"none",2
+ "ocean_model","surface_pot_temp","sspt"  ,"ocean_daily","all",.true.,"none",2
 #
 # Rosetta stone: sst_sq=square_of_sea_surface_temperature (monthly)
  "ocean_model","squared_surface_temp","sst_sq"  ,"ocean_month","all",.true.,"none",2
- "ocean_model","squared_surface_pot_temp","sst_sq"  ,"ocean_month","all",.true.,"none",2
+ "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sst_sq=square_of_sea_surface_temperature (daily)
  "ocean_model","squared_surface_temp","sst_sq"  ,"ocean_daily","all",.true.,"none",2
- "ocean_model","squared_surface_pot_temp","sst_sq"  ,"ocean_daily","all",.true.,"none",2
+ "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_daily","all",.true.,"none",2
 # Table H1: tos*
 # 
  "ocean_model","bottom_temp","bottom_temp"             ,"ocean_month","all",.true.,"none",2
