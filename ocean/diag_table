@@ -137,19 +137,19 @@ ACCESS-OM2
 # 
 # Rosetta stone: sst=sea_surface_temperature (monthly)
  "ocean_model","surface_temp","sst"  ,"ocean_month","all",.true.,"none",2
- "ocean_model","surface_pot_temp","sspt"  "ocean_month","all",.true.,"none",2
+# "ocean_model","surface_pot_temp","sspt"  "ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sst=sea_surface_temperature  (daily)
  "ocean_model","surface_temp","sst"  ,"ocean_daily","all",.true.,"none",2
- "ocean_model","surface_pot_temp","sspt"  ,"ocean_daily","all",.true.,"none",2
+# "ocean_model","surface_pot_temp","sspt"  ,"ocean_daily","all",.true.,"none",2
 #
 # Rosetta stone: sst_sq=square_of_sea_surface_temperature (monthly)
  "ocean_model","squared_surface_temp","sst_sq"  ,"ocean_month","all",.true.,"none",2
- "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_month","all",.true.,"none",2
+# "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sst_sq=square_of_sea_surface_temperature (daily)
  "ocean_model","squared_surface_temp","sst_sq"  ,"ocean_daily","all",.true.,"none",2
- "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_daily","all",.true.,"none",2
+# "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_daily","all",.true.,"none",2
 # Table H1: tos*
 # 
  "ocean_model","bottom_temp","bottom_temp"             ,"ocean_month","all",.true.,"none",2
@@ -323,7 +323,8 @@ ACCESS-OM2
  "ocean_model","runoff","runoff" ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: ice_calving=water_flux_into_sea_water_from_icebergs
- "ocean_model","ice_calving","ice_calving" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","ice_calving","ice_calving" ,"ocean_month","all",.true.,"none",2
+# RMH: 0 for ACCESS-OM2
 #
 # Rosetta stone: melt=water_flux_into_sea_water_due_to_sea_ice_thermodynamics
  "ocean_model","melt","melt" ,"ocean_month","all",.true.,"none",2
@@ -340,7 +341,6 @@ ACCESS-OM2
 
 # RMH: Added for completeness
  "ocean_model","pme_net","pme_net" ,"ocean_month","all",.true.,"none",2
- "ocean_model","pme_correct","pme_correct" ,"ocean_month","all",.true.,"none",2
 
 #==========================================================================
 # Boundary salt fluxes (Griffies et al. Table K2)
@@ -357,10 +357,10 @@ ACCESS-OM2
 # 
  "ocean_model","sfc_salt_flux_restore","sfc_salt_flux_restore"              ,"ocean_month","all",.true.,"none",2
  "ocean_model","sfc_salt_flux_coupler","sfc_salt_flux_coupler"              ,"ocean_month","all",.true.,"none",2
- "ocean_model","sfc_salt_flux_pme","sfc_salt_flux_pme"                      ,"ocean_month","all",.true.,"none",2
- "ocean_model","sfc_salt_flux_prec","sfc_salt_flux_prec"                    ,"ocean_month","all",.true.,"none",2
- "ocean_model","sfc_salt_flux_evap","sfc_salt_flux_evap"                    ,"ocean_month","all",.true.,"none",2
-
+# "ocean_model","sfc_salt_flux_pme","sfc_salt_flux_pme"                      ,"ocean_month","all",.true.,"none",2
+# "ocean_model","sfc_salt_flux_prec","sfc_salt_flux_prec"                    ,"ocean_month","all",.true.,"none",2
+# "ocean_model","sfc_salt_flux_evap","sfc_salt_flux_evap"                    ,"ocean_month","all",.true.,"none",2
+# RMH: 0 for ACCESS-OM2
 #==========================================================================
 # Boundary heat fluxes (Griffies et al. Table K3)
 #==========================================================================
@@ -373,10 +373,12 @@ ACCESS-OM2
  "ocean_model","sfc_hflux_from_water_evap","sfc_hflux_from_water_evap" ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sfc_hflux_from_runoff=temperature_flux_due_to_runoff_expressed_as_heat_flux_into_sea_water
- "ocean_model","sfc_hflux_from_runoff","sfc_hflux_from_runoff"  ,"ocean_month","all",.true.,"none",2
+# "ocean_model","sfc_hflux_from_runoff","sfc_hflux_from_runoff"  ,"ocean_month","all",.true.,"none",2
+# RMH: 0 for ACCESS-OM2
 
 # Rosetta stone: sfc_hflux_from_calving=temperature_flux_due_to_icebergs_expressed_as_heat_flux_into_sea_water
  "ocean_model","sfc_hflux_from_calving","sfc_hflux_from_calving","ocean_month","all",.true.,"none",2
+# RMH: 0 for ACCESS-OM2
 #
 # Rosetta stone: fprec_melt_heat=heat_flux_into_sea_water_due_to_snow_thermodynamics
  "ocean_model","fprec_melt_heat","fprec_melt_heat" ,"ocean_month","all",.true.,"none",2
@@ -388,7 +390,8 @@ ACCESS-OM2
 # Table K3: hfsifrazil int_z
 #
 # Rosetta stone: calving_melt_heat=heat_flux_into_sea_water_due_to_iceberg_thermodynamics
- "ocean_model","calving_melt_heat","calving_melt_heat" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","calving_melt_heat","calving_melt_heat" ,"ocean_month","all",.true.,"none",2
+# RMH: 0 for ACCESS-OM2
 #
 # Rosetta stone: lw_heat=surface_net_downward_longwave_flux
  "ocean_model","lw_heat","lw_heat" ,"ocean_month","all",.true.,"none",2
@@ -566,12 +569,12 @@ ACCESS-OM2
 # Daily surface/bottom quantities:
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_max" ,"ocean_daily","all", max ,"none",2
- "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "u_surf", "u_surf", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "v_surf", "v_surf", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "vorticity_z_surf", "vorticity_z_surf", "ocean_daily", "all", .true., "none", 2
+# "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
+# "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
+# "ocean_model", "u_surf", "u_surf", "ocean_daily", "all", .true., "none", 2
+# "ocean_model", "v_surf", "v_surf", "ocean_daily", "all", .true., "none", 2
+# "ocean_model", "vorticity_z_surf", "vorticity_z_surf", "ocean_daily", "all", .true., "none", 2
 
 # advective horizontal heat fluxes:
  "ocean_model","temp_xflux_adv","temp_xflux_adv"         ,"ocean_budget","all",.true.,"none",2
