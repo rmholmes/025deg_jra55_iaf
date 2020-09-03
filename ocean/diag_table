@@ -476,6 +476,7 @@ ACCESS-OM2
 
 # RMH: Included for completeness
  "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget","all",.true.,"none",2
+ "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget","all",.true.,"none",2
 
 # 5. interior ocean salt budget
  "ocean_model","salt_tendency","salt_tendency"           ,"ocean_budget","all",.true.,"none",2
@@ -491,19 +492,19 @@ ACCESS-OM2
  "ocean_model","salt_rivermix","salt_rivermix"                      ,"ocean_budget","all",.true.,"none",2
  "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget","all",.true.,"none",2
  "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget","all",.true.,"none",2
-# RMH: The above close the heat budget.
+# RMH: The above close the salt budget.
 
 # RMH: Included for completeness
  "ocean_model","salt_vdiffuse_diff_cbt_conv","salt_vdiffuse_diff_cbt_conv"      ,"ocean_budget","all",.true.,"none",2
+ "ocean_model","salt_rhodzt","salt_rhodzt"         ,"ocean_budget","all",.true.,"none",2
 
 #==========================================================================
 # Vertical SGS parameterizations (Griffies et al. Table M1)
 #==========================================================================
 
 # RMH: Only three fields are requested in Table M1: the temp
-# diffusivity, the salt diffusivity (which is currently commented out
-# below) and the "tendency of potential energy content". What about
-# all the others?
+# diffusivity, the salt diffusivity and the "tendency of potential energy 
+# content".
 
 # Rosetta stone: diff_cbt_t=ocean_vertical_heat_diffusivity
  "ocean_model","diff_cbt_t","diff_cbt_t" ,"ocean_budget","all",.true.,"none",2
@@ -762,5 +763,3 @@ ACCESS-OM2
 #  "ocean_model","tide_speed_drag","tide_speed_drag"   ,"ocean_month","all",.false.,"none",2
 #  "ocean_model","tide_speed_mask","tide_speed_mask"   ,"ocean_month","all",.false.,"none",2
 
-# "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget","all",.true.,"none",2
-# "ocean_model","salt_rhodzt","salt_rhodzt"         ,"ocean_budget","all",.true.,"none",2
