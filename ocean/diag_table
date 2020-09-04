@@ -567,11 +567,11 @@ ACCESS-OM2
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_max" ,"ocean_daily","all", max ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
-# "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
-# "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
-# "ocean_model", "u_surf", "u_surf", "ocean_daily", "all", .true., "none", 2
-# "ocean_model", "v_surf", "v_surf", "ocean_daily", "all", .true., "none", 2
-# "ocean_model", "vorticity_z_surf", "vorticity_z_surf", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
+ "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "u_surf", "u_surf", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "v_surf", "v_surf", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "vorticity_z_surf", "vorticity_z_surf", "ocean_daily", "all", .true., "none", 2
 
 # advective horizontal heat fluxes:
  "ocean_model","temp_xflux_adv","temp_xflux_adv"         ,"ocean_budget","all",.true.,"none",2
@@ -609,6 +609,30 @@ ACCESS-OM2
 "ocean_model", "total_ocean_sfc_salt_flux_coupler", "total_ocean_sfc_salt_flux_coupler", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_ocean_swflx_vis", "total_ocean_swflx_vis", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_ocean_swflx", "total_ocean_swflx", "ocean_scalar_snapshot", "all", "none", "none", 1
+
+# #==========================================================================
+# Non-standard ACCESS-OM2 diagnostics from Andrew's 01-IAF run
+# #==========================================================================
+
+# monthly
+"ocean_model", "bih_fric_u", "bih_fric_u", "ocean_month", "all", "average", "none", 2
+"ocean_model", "bih_fric_v", "bih_fric_v", "ocean_month", "all", "average", "none", 2
+"ocean_model", "u_dot_grad_vert_pv", "u_dot_grad_vert_pv", "ocean_month", "all", "average", "none", 2
+"ocean_model", "ekman_we","ekman_we","ocean_month","all",.true.,"none",2
+"ocean_model", "eta_nonbouss","eta_nonbouss","ocean_month","all",.true.,"none",2
+"ocean_model", "surface_temp", "surface_temp_min", "ocean_month", "all", "min", "none", 2
+
+# daily
+"ocean_model", "frazil_3d_int_z", "frazil_3d_int_z", "ocean_daily", "all", "average", "none", 2
+"ocean_model", "pme_river", "pme_river", "ocean_daily", "all", "average", "none", 2
+"ocean_model", "sfc_hflux_coupler", "sfc_hflux_coupler", "ocean_daily", "all", "average", "none", 2
+"ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_daily", "all", "average", "none", 2
+"ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_daily", "all", "average", "none", 2
+
+# The following don't exist???
+# "ocean_model", "surface_temp_max", "surface_temp_max", "ocean_daily", "all", "average", "none", 2
+# "ocean_model", "bottom_temp_max", "bottom_temp_max", "ocean_daily", "all", "average", "none", 2
+# "ocean_model", "sea_level_max", "sea_level_max", "ocean_daily", "all", "average", "none", 2
 
 # #==========================================================================
 # #==========================================================================
