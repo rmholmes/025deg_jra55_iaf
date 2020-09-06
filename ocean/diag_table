@@ -186,7 +186,7 @@ ACCESS-OM2
 # Table H1: mlotst
 #
 # Rosetta stone: mld=ocean_mixed_layer_thickness_defined_by_sigma_t
- "ocean_model","mld","mld_max" ,"ocean_month","all", max ,"none",2
+ "ocean_model","mld","mld_max" ,"ocean_month","all", "max" ,"none",2
 # Table H1: mlotstmax
 #
 # Rosetta stone: mld=ocean_mixed_layer_thickness_defined_by_sigma_t
@@ -213,10 +213,10 @@ ACCESS-OM2
 "ocean_model","pe_tot","pe_tot"                                ,"ocean_scalar","all",.true.,"none",2
 
 # Rosetta stone: hblt=ocean_mixed_layer_thickness_defined_by_mixing_scheme (daily max)
- "ocean_model","hblt","hblt_max" ,"ocean_daily","all",  max ,"none",2
+ "ocean_model","hblt","hblt_max" ,"ocean_daily","all",  "max" ,"none",2
 
 # Rosetta stone: hblt=ocean_mixed_layer_thickness_defined_by_mixing_scheme (monthly max)
- "ocean_model","hblt","hblt_max" ,"ocean_month","all",   max,"none",2
+ "ocean_model","hblt","hblt_max" ,"ocean_month","all",   "max","none",2
 
 # Rosetta stone: pot_rho_0=sea_water_potential_density 
  "ocean_model","pot_rho_0","pot_rho_0" ,"ocean_month","all",.true.,"none",2
@@ -565,7 +565,7 @@ ACCESS-OM2
 
 # Daily surface/bottom quantities:
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "mld","mld_max" ,"ocean_daily","all", max ,"none",2
+ "ocean_model", "mld","mld_max" ,"ocean_daily","all", "max" ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
  "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
@@ -629,10 +629,11 @@ ACCESS-OM2
 "ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_daily", "all", "average", "none", 2
 "ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_daily", "all", "average", "none", 2
 
-# The following don't exist???
-# "ocean_model", "surface_temp_max", "surface_temp_max", "ocean_daily", "all", "average", "none", 2
-# "ocean_model", "bottom_temp_max", "bottom_temp_max", "ocean_daily", "all", "average", "none", 2
-# "ocean_model", "sea_level_max", "sea_level_max", "ocean_daily", "all", "average", "none", 2
+"ocean_model", "surface_temp", "surface_temp_max", "ocean_daily", "all", "max", "none", 2
+"ocean_model", "bottom_temp", "bottom_temp_max", "ocean_daily", "all", "max", "none", 2
+"ocean_model", "sea_level", "sea_level_max", "ocean_daily", "all", "max", "none", 2
+
+"ocean_model", "surface_temp", "surface_temp_min", "ocean_daily", "all", "min", "none", 2
 
 # #==========================================================================
 # #==========================================================================
