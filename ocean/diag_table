@@ -539,14 +539,16 @@ ACCESS-OM2
  "ocean_model","gm_eddy_ke_source","gm_eddy_ke_source" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: aiso_lap=ocean_momentum_xy_laplacian_diffusivity
- "ocean_model","aiso_lap","aiso_lap" ,"ocean_budget","all",.true.,"none",2
-#
+# "ocean_model","aiso_lap","aiso_lap" ,"ocean_budget","all",.true.,"none",2
+# RMH: ACCESS-OM2 uses biharmonic friction
+# 
 # Rosetta stone: aiso_bih=ocean_momentum_xy_biharmonic_diffusivity
  "ocean_model","aiso_bih","aiso_bih" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: ocean_kinetic_energy_dissipation_per_unit_area_due_to_xy_friction is
 # diagnosed from the sum of the following two fields 
- "ocean_model","horz_lap_diss","horz_lap_diss" ,"ocean_budget",all,.true.,"none",2
+# "ocean_model","horz_lap_diss","horz_lap_diss" ,"ocean_budget",all,.true.,"none",2
+# RMH: ACCESS-OM2 uses biharmonic friction
  "ocean_model","horz_bih_diss","horz_bih_diss" ,"ocean_budget",all,.true.,"none",2
 #
 
@@ -569,9 +571,11 @@ ACCESS-OM2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
  "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "u_surf", "u_surf", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "v_surf", "v_surf", "ocean_daily", "all", .true., "none", 2
- "ocean_model", "vorticity_z_surf", "vorticity_z_surf", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "usurf", "usurf", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "vsurf", "vsurf", "ocean_daily", "all", .true., "none", 2
+
+# Below three don't seem to exist:
+# "ocean_model", "vorticity_z_surf", "vorticity_z_surf", "ocean_daily", "all", .true., "none", 2
 
 # advective horizontal heat fluxes:
  "ocean_model","temp_xflux_adv","temp_xflux_adv"         ,"ocean_budget","all",.true.,"none",2
