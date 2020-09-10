@@ -360,6 +360,7 @@
     zero_net_water_restore = .true.
     zero_surface_stress = .false.
     zero_water_fluxes = .false.
+    ocean_ice_salt_limit = 0.006
 /
 
 &ocean_shortwave_csiro_nml
