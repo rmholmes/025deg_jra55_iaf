@@ -8,7 +8,7 @@
     ! 450, 540, 600, 675, 720, 900, 1080, 1200, 1350, 1800, 2160, 2700, 3600 or 5400 seconds.
     ! The default timestep is 1350s, which should be stable for an initial spinup from rest.
     ! After the first year or two of equilibration you could try 1800s.
-    ice_ocean_timestep = 1350
+    ice_ocean_timestep = 900
 &end
 
 &date_manager_nml
