@@ -369,11 +369,10 @@ ACCESS-OM2
  "ocean_model","sfc_hflux_from_water_evap","sfc_hflux_from_water_evap" ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sfc_hflux_from_runoff=temperature_flux_due_to_runoff_expressed_as_heat_flux_into_sea_water
-# "ocean_model","sfc_hflux_from_runoff","sfc_hflux_from_runoff"  ,"ocean_month","all",.true.,"none",2
-# RMH: 0 for ACCESS-OM2
+"ocean_model","sfc_hflux_from_runoff","sfc_hflux_from_runoff"  ,"ocean_month","all",.true.,"none",2
 
 # Rosetta stone: sfc_hflux_from_calving=temperature_flux_due_to_icebergs_expressed_as_heat_flux_into_sea_water
- "ocean_model","sfc_hflux_from_calving","sfc_hflux_from_calving","ocean_month","all",.true.,"none",2
+# "ocean_model","sfc_hflux_from_calving","sfc_hflux_from_calving","ocean_month","all",.true.,"none",2
 # RMH: 0 for ACCESS-OM2
 #
 # Rosetta stone: fprec_melt_heat=heat_flux_into_sea_water_due_to_snow_thermodynamics
