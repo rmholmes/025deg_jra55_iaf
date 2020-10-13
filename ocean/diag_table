@@ -126,32 +126,31 @@ ACCESS-OM2
  "ocean_model","temp","temp"         ,"ocean_month","all",.true.,"none",2
 # Table H1: bigthetao
 #
-# Rosetta stone: temp_global_ave=sea_water_potential_temperature (global ave)
+# Global average Conservative Temperature
 "ocean_model","temp_global_ave","temp_global_ave" ,"ocean_scalar","all",.true.,"none",2
-# Table H1: thetaoga or Bigthetaoga (???)
-# XXX: Missing - either thetaoga or Bigthetaoga
+# Table H1: Bigthetaoga
+# Global average potential temperature
+"ocean_model","pot_temp_global_ave","pot_temp_global_ave" ,"ocean_scalar","all",.true.,"none",2
+# Table H1: thetaoga
 # 
-# Rosetta stone: sst=sea_surface_temperature (monthly)
- "ocean_model","surface_temp","sst"  ,"ocean_month","all",.true.,"none",2
-# "ocean_model","surface_pot_temp","sspt"  "ocean_month","all",.true.,"none",2
+# Rosetta stone: sst=sea_surface_temperature (monthly) - potential temperature!
+ "ocean_model","surface_pot_temp","sst"  "ocean_month","all",.true.,"none",2
 #
-# Rosetta stone: sst=sea_surface_temperature  (daily)
- "ocean_model","surface_temp","sst"  ,"ocean_daily","all",.true.,"none",2
-# "ocean_model","surface_pot_temp","sspt"  ,"ocean_daily","all",.true.,"none",2
+# Rosetta stone: sst=sea_surface_temperature  (daily) - potential temperature!
+ "ocean_model","surface_pot_temp","sst"  ,"ocean_daily","all",.true.,"none",2
 #
-# Rosetta stone: sst_sq=square_of_sea_surface_temperature (monthly)
- "ocean_model","squared_surface_temp","sst_sq"  ,"ocean_month","all",.true.,"none",2
-# "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_month","all",.true.,"none",2
+# Rosetta stone: sst_sq=square_of_sea_surface_temperature (monthly) - potential temperature!
+ "ocean_model","squared_surface_pot_temp","sst_sq"  ,"ocean_month","all",.true.,"none",2
 #
-# Rosetta stone: sst_sq=square_of_sea_surface_temperature (daily)
- "ocean_model","squared_surface_temp","sst_sq"  ,"ocean_daily","all",.true.,"none",2
-# "ocean_model","squared_surface_pot_temp","sspt_sq"  ,"ocean_daily","all",.true.,"none",2
+# Rosetta stone: sst_sq=square_of_sea_surface_temperature (daily) - potential temperature!
+ "ocean_model","squared_surface_pot_temp","sst_sq"  ,"ocean_daily","all",.true.,"none",2
 # Table H1: tos*
-# 
- "ocean_model","bottom_temp","bottom_temp"             ,"ocean_month","all",.true.,"none",2
-# Table H1: tob
 #
-"ocean_model","temp_surface_ave","temp_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
+# Bottom temperature - potential temperature!
+ "ocean_model","bottom_pot_temp","bottom_temp"             ,"ocean_month","all",.true.,"none",2
+# Table H1: tob
+# 
+"ocean_model","pot_temp_surface_ave","temp_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
 # Table H1: tosga
 #
 # Rosetta stone: salt=sea_water_salinity
@@ -369,7 +368,7 @@ ACCESS-OM2
  "ocean_model","sfc_hflux_from_water_evap","sfc_hflux_from_water_evap" ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sfc_hflux_from_runoff=temperature_flux_due_to_runoff_expressed_as_heat_flux_into_sea_water
-"ocean_model","sfc_hflux_from_runoff","sfc_hflux_from_runoff"  ,"ocean_month","all",.true.,"none",2
+ "ocean_model","sfc_hflux_from_runoff","sfc_hflux_from_runoff"  ,"ocean_month","all",.true.,"none",2
 
 # Rosetta stone: sfc_hflux_from_calving=temperature_flux_due_to_icebergs_expressed_as_heat_flux_into_sea_water
 # "ocean_model","sfc_hflux_from_calving","sfc_hflux_from_calving","ocean_month","all",.true.,"none",2
