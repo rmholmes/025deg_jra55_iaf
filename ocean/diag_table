@@ -134,7 +134,7 @@ ACCESS-OM2
 # Table H1: thetaoga
 # 
 # Rosetta stone: sst=sea_surface_temperature (monthly) - potential temperature!
- "ocean_model","surface_pot_temp","sst"  "ocean_month","all",.true.,"none",2
+ "ocean_model","surface_pot_temp","sst"  ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: sst=sea_surface_temperature  (daily) - potential temperature!
  "ocean_model","surface_pot_temp","sst"  ,"ocean_daily","all",.true.,"none",2
@@ -152,6 +152,12 @@ ACCESS-OM2
 # 
 "ocean_model","pot_temp_surface_ave","temp_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
 # Table H1: tosga
+#
+# Conservative temperature outputs for checks:
+ "ocean_model","surface_temp","ssCT" ,"ocean_daily","all",.true.,"none",2
+ "ocean_model","squared_surface_temp","ssCT_sq" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","squared_surface_temp","ssCT_sq" ,"ocean_daily","all",.true.,"none",2
+ "ocean_model","bottom_temp","bottom_CT"        ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: salt=sea_water_salinity
  "ocean_model","salt","salt" ,"ocean_month","all",.true.,"none",2
