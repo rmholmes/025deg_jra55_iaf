@@ -147,17 +147,17 @@ ACCESS-OM2
 # Table H1: tos*
 #
 # Bottom temperature - potential temperature!
- "ocean_model","bottom_pot_temp","bottom_temp"             ,"ocean_month","all",.true.,"none",2
+ "ocean_model","bottom_pot_temp","bottom_pot_temp"             ,"ocean_month","all",.true.,"none",2
 # Table H1: tob
 # 
-"ocean_model","pot_temp_surface_ave","temp_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
+"ocean_model","pot_temp_surface_ave","sst_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
 # Table H1: tosga
 #
-# Conservative temperature outputs for checks:
- "ocean_model","surface_temp","ssCT" ,"ocean_daily","all",.true.,"none",2
- "ocean_model","squared_surface_temp","ssCT_sq" ,"ocean_month","all",.true.,"none",2
- "ocean_model","squared_surface_temp","ssCT_sq" ,"ocean_daily","all",.true.,"none",2
- "ocean_model","bottom_temp","bottom_CT"        ,"ocean_month","all",.true.,"none",2
+# Surface/bottom conservative temperature outputs for checks:
+# "ocean_model","surface_temp","surface_temp" ,"ocean_daily","all",.true.,"none",2
+# "ocean_model","squared_surface_temp","surface_temp_sq" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","squared_surface_temp","surface_temp_sq" ,"ocean_daily","all",.true.,"none",2
+# "ocean_model","bottom_temp","bottom_temp"        ,"ocean_month","all",.true.,"none",2
 #
 # Rosetta stone: salt=sea_water_salinity
  "ocean_model","salt","salt" ,"ocean_month","all",.true.,"none",2
@@ -574,7 +574,7 @@ ACCESS-OM2
  "ocean_model", "mld","mld_max" ,"ocean_daily","all", "max" ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
- "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "bottom_pot_temp", "bottom_pot_temp", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "usurf", "usurf", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "vsurf", "vsurf", "ocean_daily", "all", .true., "none", 2
 
@@ -593,7 +593,7 @@ ACCESS-OM2
 "ocean_model", "salt_global_ave", "salt_global_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "salt_surface_ave", "salt_surface_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "temp_global_ave", "temp_global_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
-"ocean_model", "temp_surface_ave", "temp_surface_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
+"ocean_model", "pot_temp_surface_ave", "pot_temp_surface_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_net_sfc_heating", "total_net_sfc_heating", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_ocean_evap_heat", "total_ocean_evap_heat", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_ocean_evap", "total_ocean_evap", "ocean_scalar_snapshot", "all", "none", "none", 1
@@ -628,7 +628,8 @@ ACCESS-OM2
 "ocean_model", "u_dot_grad_vert_pv", "u_dot_grad_vert_pv", "ocean_month", "all", "average", "none", 2
 "ocean_model", "ekman_we","ekman_we","ocean_month","all",.true.,"none",2
 "ocean_model", "eta_nonbouss","eta_nonbouss","ocean_month","all",.true.,"none",2
-"ocean_model", "surface_temp", "surface_temp_min", "ocean_month", "all", "min", "none", 2
+"ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_month", "all", "max", "none", 2
+"ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_month", "all", "min", "none", 2
 
 # daily
 "ocean_model", "frazil_3d_int_z", "frazil_3d_int_z", "ocean_daily", "all", "average", "none", 2
@@ -637,11 +638,11 @@ ACCESS-OM2
 "ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_daily", "all", "average", "none", 2
 "ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_daily", "all", "average", "none", 2
 
-"ocean_model", "surface_temp", "surface_temp_max", "ocean_daily", "all", "max", "none", 2
-"ocean_model", "bottom_temp", "bottom_temp_max", "ocean_daily", "all", "max", "none", 2
+"ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_daily", "all", "max", "none", 2
+"ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_daily", "all", "min", "none", 2
+"ocean_model", "bottom_pot_temp", "bottom_pot_temp_max", "ocean_daily", "all", "max", "none", 2
 "ocean_model", "sea_level", "sea_level_max", "ocean_daily", "all", "max", "none", 2
 
-"ocean_model", "surface_temp", "surface_temp_min", "ocean_daily", "all", "min", "none", 2
 
 # #==========================================================================
 # #==========================================================================
