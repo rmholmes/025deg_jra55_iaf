@@ -130,7 +130,8 @@ ACCESS-OM2
 "ocean_model","temp_global_ave","temp_global_ave" ,"ocean_scalar","all",.true.,"none",2
 # Table H1: Bigthetaoga
 # Global average potential temperature
-"ocean_model","pot_temp_global_ave","pot_temp_global_ave" ,"ocean_scalar","all",.true.,"none",2
+# RMH: This variable does not exist in MOM.
+#"ocean_model","pot_temp_global_ave","pot_temp_global_ave" ,"ocean_scalar","all",.true.,"none",2
 # Table H1: thetaoga
 # 
 # Rosetta stone: sst=sea_surface_temperature (monthly) - potential temperature!
@@ -147,10 +148,13 @@ ACCESS-OM2
 # Table H1: tos*
 #
 # Bottom temperature - potential temperature!
- "ocean_model","bottom_pot_temp","bottom_pot_temp"             ,"ocean_month","all",.true.,"none",2
+# RMH: This variable does not exist in MOM.
+# "ocean_model","bottom_pot_temp","bottom_pot_temp"             ,"ocean_month","all",.true.,"none",2
+"ocean_model","bottom_temp","bottom_temp"             ,"ocean_month","all",.true.,"none",2
 # Table H1: tob
 # 
-"ocean_model","pot_temp_surface_ave","sst_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
+# RMH: This variable does not exist in MOM - must be calculated offline from pot_temp
+# "ocean_model","pot_temp_surface_ave","sst_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
 # Table H1: tosga
 #
 # Surface/bottom conservative temperature outputs for checks:
@@ -574,7 +578,9 @@ ACCESS-OM2
  "ocean_model", "mld","mld_max" ,"ocean_daily","all", "max" ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
- "ocean_model", "bottom_pot_temp", "bottom_pot_temp", "ocean_daily", "all", .true., "none", 2
+# Below does not exist in MOM
+# "ocean_model", "bottom_pot_temp", "bottom_pot_temp", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "usurf", "usurf", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "vsurf", "vsurf", "ocean_daily", "all", .true., "none", 2
 
@@ -593,7 +599,7 @@ ACCESS-OM2
 "ocean_model", "salt_global_ave", "salt_global_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "salt_surface_ave", "salt_surface_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "temp_global_ave", "temp_global_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
-"ocean_model", "pot_temp_surface_ave", "pot_temp_surface_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
+"ocean_model", "temp_surface_ave", "temp_surface_ave", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_net_sfc_heating", "total_net_sfc_heating", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_ocean_evap_heat", "total_ocean_evap_heat", "ocean_scalar_snapshot", "all", "none", "none", 1
 "ocean_model", "total_ocean_evap", "total_ocean_evap", "ocean_scalar_snapshot", "all", "none", "none", 1
@@ -640,7 +646,9 @@ ACCESS-OM2
 
 "ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_daily", "all", "max", "none", 2
 "ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_daily", "all", "min", "none", 2
-"ocean_model", "bottom_pot_temp", "bottom_pot_temp_max", "ocean_daily", "all", "max", "none", 2
+# Below does not exist in MOM
+# "ocean_model", "bottom_pot_temp", "bottom_pot_temp_max", "ocean_daily", "all", "max", "none", 2
+"ocean_model", "bottom_temp", "bottom_temp_max", "ocean_daily", "all", "max", "none", 2
 "ocean_model", "sea_level", "sea_level_max", "ocean_daily", "all", "max", "none", 2
 
 
