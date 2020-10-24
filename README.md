@@ -35,3 +35,7 @@ ln -s /scratch/e14/rmh561/access-om2/archive/025deg_jra55_iaf_cycle1/output060 a
 - set use_restart_time = .true. in ice/cice_in.nml
 - Keep running...
 
+# RMH: Notes on errors:
+
+1966-06-27T21:00:00 - Vertical thermo error
+
