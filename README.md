@@ -37,5 +37,9 @@ ln -s /scratch/e14/rmh561/access-om2/archive/025deg_jra55_iaf_cycle1/output060 a
 
 # RMH: Notes on errors:
 
+cycle 2:
 1966-06-27T21:00:00 - Vertical thermo error
+
+cycle 3:
+1959-12-19T03:00:00 - Vertical thermo error
 
