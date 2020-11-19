@@ -40,4 +40,4 @@ ln -s /scratch/e14/rmh561/access-om2/archive/025deg_jra55_iaf_cycle1/output060 a
 cycle 3:
 
 Ice thermo, 1959.
-
+NETCDF error, 17/12/1966
