@@ -37,7 +37,7 @@ ln -s /scratch/e14/rmh561/access-om2/archive/025deg_jra55_iaf_cycle1/output060 a
 
 # RMH: Notes on errors:
 
-cycle 2:
+cycle 3:
 
-Ice: Error closing history file. 2013.
+Ice thermo, 1959.
 
