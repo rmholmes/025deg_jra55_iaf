@@ -36,7 +36,7 @@ submodels:
 
     - name: ocean
       model: mom
-      exe: /g/data/e14/rmh561/access-om2/bin/fms_ACCESS-OM_6de7be9_libaccessom2_a9d4b67.x
+      exe: /scratch/e14/rmh561/access-om2/bin/fms_ACCESS-OM_6de7be9_libaccessom2_a9d4b67.x
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
       ncpus: 1455
