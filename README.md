@@ -45,3 +45,6 @@ NETCDF error, 17/12/1966
 cycle 5:
 
 1993-02-21: bad departure points
+
+cycle 6:
+1966-6-28: Ice thermo
