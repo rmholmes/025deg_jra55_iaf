@@ -48,3 +48,9 @@ cycle 5:
 
 cycle 6:
 1966-6-28: Ice thermo
+
+SSS restoring piston velocity:
+restor_tscale = 21.28 days
+dz surface (KDS50) = 1.151749
+
+piston velocity = ~ 20m/365 days - so on the low side.
