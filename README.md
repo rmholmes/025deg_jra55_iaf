@@ -51,6 +51,6 @@ cycle 6:
 
 SSS restoring piston velocity:
 restor_tscale = 21.28 days
-dz surface (KDS50) = 1.151749
+dz surface (KDS50) = 2.3m 
 
-piston velocity = ~ 20m/365 days - so on the low side.
+piston velocity = ~ 39.5m/365 days.     
