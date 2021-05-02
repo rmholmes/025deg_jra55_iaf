@@ -16,7 +16,7 @@ SYNCDIR=/g/data/ik11/outputs/access-om2-025/025deg_jra55_iaf_omip2_cycle6/
 
 exitcode=0
 help=false
-dirtype=restart # output
+dirtype=restart #output
 exclude="--exclude *.nc.*"
 rsyncflags="-vrltoD --safe-links"
 rmlocal=false
