@@ -58,44 +58,14 @@ ACCESS-OM2-025
 
 # monthly 3d fields
 
-"ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "age_global", "age_global", "ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-buoyfreq2_wt-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "buoyfreq2_wt", "buoyfreq2_wt", "ocean-3d-buoyfreq2_wt-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-diff_cbt_t-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "diff_cbt_t", "diff_cbt_t", "ocean-3d-diff_cbt_t-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-dzt-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "dzt", "dzt", "ocean-3d-dzt-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 "ocean-3d-pot_rho_0-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "pot_rho_0", "pot_rho_0", "ocean-3d-pot_rho_0-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-pot_rho_2-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "pot_rho_2", "pot_rho_2", "ocean-3d-pot_rho_2-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-pot_temp-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "pot_temp", "pot_temp", "ocean-3d-pot_temp-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-3d-salt-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "salt", "salt", "ocean-3d-salt-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-3d-temp_xflux_adv-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_xflux_adv", "temp_xflux_adv", "ocean-3d-temp_xflux_adv-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-temp_yflux_adv-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_yflux_adv", "temp_yflux_adv", "ocean-3d-temp_yflux_adv-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 "ocean-3d-temp-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "temp", "temp", "ocean-3d-temp-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-tx_trans-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "tx_trans", "tx_trans", "ocean-3d-tx_trans-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-ty_trans_gm-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ty_trans_gm", "ty_trans_gm", "ocean-3d-ty_trans_gm-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-3d-ty_trans_nrho_submeso-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "ty_trans_nrho_submeso", "ty_trans_nrho_submeso", "ocean-3d-ty_trans_nrho_submeso-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
@@ -106,20 +76,11 @@ ACCESS-OM2-025
 "ocean-3d-ty_trans_rho-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "ty_trans_rho", "ty_trans_rho", "ocean-3d-ty_trans_rho-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-3d-ty_trans_submeso-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ty_trans_submeso", "ty_trans_submeso", "ocean-3d-ty_trans_submeso-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-ty_trans-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ty_trans", "ty_trans", "ocean-3d-ty_trans-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 "ocean-3d-u-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "u", "u", "ocean-3d-u-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-3d-v-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "v", "v", "ocean-3d-v-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-vert_pv-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "vert_pv", "vert_pv", "ocean-3d-vert_pv-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-3d-wt-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "wt", "wt", "ocean-3d-wt-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
@@ -127,29 +88,8 @@ ACCESS-OM2-025
 
 # monthly 3d squared fields
 
-"ocean-3d-u-1-monthly-pow02-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "u", "u", "ocean-3d-u-1-monthly-pow02-ym%4yr%2mo", "all", "pow02", "none", 2
-
-"ocean-3d-v-1-monthly-pow02-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "v", "v", "ocean-3d-v-1-monthly-pow02-ym%4yr%2mo", "all", "pow02", "none", 2
-
 
 # monthly 2d fields
-
-"ocean-2d-agm-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "agm", "agm", "ocean-2d-agm-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-aredi-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "aredi", "aredi", "ocean-2d-aredi-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-bmf_u-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "bmf_u", "bmf_u", "ocean-2d-bmf_u-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-bmf_v-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "bmf_v", "bmf_v", "ocean-2d-bmf_v-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-ekman_we-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ekman_we", "ekman_we", "ocean-2d-ekman_we-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-2d-eta_nonbouss-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "eta_nonbouss", "eta_nonbouss", "ocean-2d-eta_nonbouss-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2

@@ -139,33 +139,33 @@ diag_table:
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            age_global:
+            # age_global:
             # aiso_bih:
-            buoyfreq2_wt:
-            diff_cbt_t:
-            dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
+            # buoyfreq2_wt:
+            # diff_cbt_t:
+            # dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
             pot_rho_0:
-            pot_rho_2:
-            pot_temp:
+            # pot_rho_2:
+            # pot_temp:
             salt:
-            temp_xflux_adv:
-            temp_yflux_adv:
+            # temp_xflux_adv:
+            # temp_yflux_adv:
             temp:
             # tx_trans_gm:
             # tx_trans_nrho_submeso:
             # tx_trans_rho_gm:
             # tx_trans_rho:
             # tx_trans_submeso:
-            tx_trans:
-            ty_trans_gm:
+            # tx_trans:
+            # ty_trans_gm:
             ty_trans_nrho_submeso:
             ty_trans_rho_gm:
             ty_trans_rho:
-            ty_trans_submeso:
-            ty_trans:
+            # ty_trans_submeso:
+            # ty_trans:
             u:
             v:
-            vert_pv:
+            # vert_pv:
             # vorticity_z:
             wt:
     'monthly 3d squared fields':  # for calculating EKE etc
@@ -175,19 +175,19 @@ diag_table:
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: pow02  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            u:
-            v:
+            # u:
+            # v:
     'monthly 2d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            agm:
-            aredi:
-            bmf_u:
-            bmf_v:
-            ekman_we:
+            # agm:
+            # aredi:
+            # bmf_u:
+            # bmf_v:
+            # ekman_we:
             eta_nonbouss:
             evap_heat:
             evap:
