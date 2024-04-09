@@ -1,14 +1,29 @@
 contact: Ryan Holmes
 email: ryan.holmes@bom.gov.au
 created: 2023-06-27
+name: 025deg_jra55_iaf_era5comparison
+experiment_uuid: 6b54290c-24a2-4bf3-bef0-409c0fa7a955
+model:
+  - ACCESS-OM2
+nominal_resolution:
+  - 0.25 degrees
+version: 1
 description: |-
+  0.25 degree ACCESS-OM2 global model configuration with JRA55-do v1.5.0
+  interannual forcing (1980-2019)
+long_description: |-
   0.25 degree ACCESS-OM2 global model configuration under interannual forcing.
   The configuration is based on that described in Kiss et al. (2020),
   https://doi.org/10.5194/gmd-13-401-2020, but with many improvements.
   Initial conditions are WOA13v2 potential temperature and practical salinity.
-  Run with JRA55-do v1.4.0 interannually-varying forcing with all solid runoff
+  Run with JRA55-do v1.5.0 interannually-varying forcing with all solid runoff
   converted to liquid runoff with no heat transfer.
-  Spin up starts 1 Jan 1958 and runs to 1 Jan 2019.
+  Spin up starts 1 Jan 1980 and runs (currently) to end of 2023. The run may be
+  extended in the future.
+  This run differs from OMIP-2 runs (025deg_jra55_iaf_omip2_cycle*) in that it
+  uses JRA55-do v1.5.0 forcing rather than v1.4.0, and the spin-up begins in
+  1980 instead of 1958 to facilitate an apples-to-apples comparison with the
+  ERA5 run 025deg_era5_iaf.
 notes: |-
   Source code: https://github.com/COSIMA/access-om2
   License: Attribution-NonCommercial-NoDerivatives 4.0 International (http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
@@ -22,7 +37,12 @@ notes: |-
   which is supported by the Australian Government."
   (c) let us know of any publications which use these models or data so we can add them to our list:
   https://scholar.google.com/citations?hl=en&user=inVqu_4AAAAJ
+reference: null
+license: null
 url: https://github.com/rmholmes/025deg_jra55_iaf/tree/jra55v150
+parent_experiment: null
+related_experiments:
+  - 537aabc8-a232-4a26-8269-42896a250e3b
 keywords:
   - quarter
   - cosima
