@@ -1,6 +1,6 @@
 contact: Ryan Holmes
-email: ryan.holmes@unsw.edu.au
-created: 2020-11-03
+email: ryan.holmes@bom.gov.au
+created: 2024-04-12
 description: >-
   0.25 degree ACCESS-OM2 global model configuration under interannual
   forcing. ACCESS-OM2-025 physics-only contribution to the CMIP6 Ocean
@@ -11,7 +11,7 @@ description: >-
   https://doi.org/10.5194/gmd-13-401-2020, but with many improvements.
   Initial conditions are WOA13v2 potential temperature and practical
   salinity. However, the WOA potential temperature field is converted
-  to Conservative Temperature for the initical condition unlike
+  to Conservative Temperature for the initial condition unlike
   earlier versions of ACCESS-OM2. The topography has also been updated
   (see https://github.com/COSIMA/access-om2/issues/158). Run with
   JRA55-do v1.4.0 interannually-varying forcing with all solid runoff
@@ -24,6 +24,9 @@ description: >-
   github in the repository
   https://github.com/rmholmes/025deg_jra55_iaf. Each cycle is under a
   different branch listed as omip_amoctopo_cycle[1-6].
+  This configuration is an extension of the last cycle of the simulation
+  to the end of 2023 (currently) based on JRA55-do v1.5.0 forcing (for
+  2019) and then JRA55-do v1.5.0.1 forcing (for 2020-2023).
 note: >-
   Output diagnostics are extensive based on the CMIP6 OMIP diagnostics
   request listed in Griffies et al (2016,
@@ -34,6 +37,6 @@ keywords:
   - quarter
   - cosima
   - access-om2-025
-  - jra55-do-v1.4.0
+  - jra55-do-v1.5.0.1
   - iaf
   - omip2
