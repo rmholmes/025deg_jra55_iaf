@@ -660,8 +660,9 @@ ACCESS-OM2
 "ocean_model", "bottom_temp", "bottom_temp_max", "ocean_daily", "all", "max", "none", 2
 "ocean_model", "sea_level", "sea_level_max", "ocean_daily", "all", "max", "none", 2
 
-# Daily density to compute MLD:
+# Daily density and dzt to compute MLD:
 "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_daily", "all", "average", "none", 2
+"ocean_model", "dzt", "dzt", "ocean_daily", "all", "average", "none", 2
 
 # Snapshots to close budgets offline:
 "ocean_model", "temp", "temp", "ocean_snapshot_daily", "all", "none", "none", 2
