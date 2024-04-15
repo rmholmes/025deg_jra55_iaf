@@ -488,6 +488,7 @@ ACCESS-OM2
 # Snapshots to close budgets offline:
 "ocean_model", "temp", "temp", "ocean_snapshot", "all", "none", "none", 2
 "ocean_model", "mld", "mld", "ocean_snapshot", "all", "none", "none", 2
+"ocean_model", "dzt", "dzt", "ocean_snapshot", "all", "none", "none", 2
 "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_snapshot", "all", "none", "none", 2
 
 # RMH: Included for completeness
@@ -664,6 +665,7 @@ ACCESS-OM2
 
 # Snapshots to close budgets offline:
 "ocean_model", "temp", "temp", "ocean_snapshot_daily", "all", "none", "none", 2
+"ocean_model", "dzt", "dzt", "ocean_snapshot_daily", "all", "none", "none", 2
 "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_snapshot_daily", "all", "none", "none", 2
 "ocean_model", "mld", "mld", "ocean_snapshot_daily", "all", "none", "none", 2
 
