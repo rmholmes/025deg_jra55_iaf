@@ -677,12 +677,12 @@ ACCESS-OM2
  "ocean_model","temp_submeso","temp_submeso"             ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt"    ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_nonlocal_KPP","temp_nonlocal_KPP"              ,"ocean_budget_daily","all",.true.,"none",2
-# RMH: sw_heat included above.
+ "ocean_model","sw_heat","sw_heat"              ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_vdiffuse_sbc","temp_vdiffuse_sbc"              ,"ocean_budget_daily","all",.true.,"none",2
-# RMH: sfc_hflux_pme included above.
+ "ocean_model","sfc_hflux_pme","sfc_hflux_pme"              ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","frazil_3d","frazil_3d"                                          ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_eta_smooth","temp_eta_smooth"                  ,"ocean_budget_daily","all",.true.,"none",2
-# RMH: temp_rivermix currently included above.
+ "ocean_model","temp_rivermix","temp_rivermix"              ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","neutral_diffusion_temp","neutral_diffusion_temp"    ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","neutral_gm_temp","neutral_gm_temp"                  ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33"              ,"ocean_budget_daily","all",.true.,"none",2
