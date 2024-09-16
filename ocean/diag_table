@@ -703,4 +703,17 @@ ACCESS-OM2
  "ocean_model","net_sfc_heating","net_sfc_heating"                              ,"ocean_daily","all",.true.,"none",2
 
 # Online MLD-integrated diagnostics testing:
+ "ocean_model","temp_tendency_in_mld","temp_tendency_in_mld"                  ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_advection_in_mld","temp_advection_in_mld"                  ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","temp_submeso_in_mld","temp_submeso_in_mld"             ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","temp_vdiffuse_diff_cbt_in_mld","temp_vdiffuse_diff_cbt_in_mld"    ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","temp_nonlocal_KPP_in_mld","temp_nonlocal_KPP_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","sw_heat_in_mld","sw_heat_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","temp_vdiffuse_sbc_in_mld","temp_vdiffuse_sbc_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
+ #"ocean_model","sfc_hflux_pme","sfc_hflux_pme"              ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","frazil_3d_in_mld","frazil_3d_in_mld"                                          ,"ocean_budget_daily","all",.true.,"none",2
+ #"ocean_model","temp_eta_smooth","temp_eta_smooth"                  ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","temp_rivermix_in_mld","temp_rivermix_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","neutral_diffusion_in_mld_temp","neutral_diffusion_in_mld_temp"    ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","neutral_gm_in_mld_temp","neutral_gm_in_mld_temp"                  ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","temp_vdiffuse_k33_in_mld","temp_vdiffuse_k33_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
