@@ -195,6 +195,8 @@ ACCESS-OM2
 #
 # Rosetta stone: mld=ocean_mixed_layer_thickness_defined_by_sigma_t
  "ocean_model","mld","mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","temp_mld","temp_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","salt_mld","salt_mld" ,"ocean_month","all",.true.,"none",2
 # Table H1: mlotst
 #
 # Rosetta stone: mld=ocean_mixed_layer_thickness_defined_by_sigma_t
@@ -215,8 +217,8 @@ ACCESS-OM2
 # Table H1: msftbarot
 
 # 
- "ocean_model","bv_freq","bv_freq"                             ,"ocean_month","all",.true.,"none",2
- "ocean_model","buoyfreq2_wt","buoyfreq2_wt"                   ,"ocean_month","all",.true.,"none",2
+# "ocean_model","bv_freq","bv_freq"                             ,"ocean_month","all",.true.,"none",2
+# "ocean_model","buoyfreq2_wt","buoyfreq2_wt"                   ,"ocean_month","all",.true.,"none",2
 # Table H1: obvfsq
 
 # Extras not in Griffies Table H1:
@@ -225,7 +227,7 @@ ACCESS-OM2
 "ocean_model","pe_tot","pe_tot"                                ,"ocean_scalar","all",.true.,"none",2
 
 # Rosetta stone: hblt=ocean_mixed_layer_thickness_defined_by_mixing_scheme (daily max)
- "ocean_model","hblt","hblt_max" ,"ocean_daily","all",  "max" ,"none",2
+# "ocean_model","hblt","hblt_max" ,"ocean_daily","all",  "max" ,"none",2
 
 # Rosetta stone: hblt=ocean_mixed_layer_thickness_defined_by_mixing_scheme (monthly max)
  "ocean_model","hblt","hblt_max" ,"ocean_month","all",   "max","none",2
@@ -300,8 +302,8 @@ ACCESS-OM2
  "ocean_model","temp_xflux_gm_int_z","temp_xflux_gm_int_z"                                  ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_xflux_ndiffuse_int_z","temp_xflux_ndiffuse_int_z" ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_yflux_ndiffuse_int_z","temp_yflux_ndiffuse_int_z" ,"ocean_month","all",.true.,"none",2
- "ocean_model","temp_sigma_diff_xflux_int_z","temp_xflux_sigma"       ,"ocean_month","all",.true.,"none",2
- "ocean_model","temp_sigma_diff_yflux_int_z","temp_yflux_sigma"       ,"ocean_month","all",.true.,"none",2
+# "ocean_model","temp_sigma_diff_xflux_int_z","temp_xflux_sigma"       ,"ocean_month","all",.true.,"none",2
+# "ocean_model","temp_sigma_diff_yflux_int_z","temp_yflux_sigma"       ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_yflux_submeso_int_z","temp_yflux_submeso_int_z"  ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_xflux_submeso_int_z","temp_xflux_submeso_int_z"  ,"ocean_month","all",.true.,"none",2
 # Table I1: hfx, hfy, hfbasin*
@@ -414,6 +416,7 @@ ACCESS-OM2
 #
 # Rosetta stone: sw_heat=downwelling_shortwave_flux_in_sea_water
  "ocean_model","sw_heat","sw_heat" ,"ocean_month","all",.true.,"none",2
+
 # Rosetta stone: flux from ice-ocean exchnage
  "ocean_model","mh_flux","mh_flux" ,"ocean_month","all",.true.,"none",2
  "ocean_model","liceht","liceht" ,"ocean_month","all",.true.,"none",2
@@ -448,18 +451,9 @@ ACCESS-OM2
  "ocean_model","tau_y","tau_y" ,"ocean_month","all",.true.,"none",2
 #
 #==========================================================================
-# 3D heat and salt budget terms (Griffies et al. Table L1)
+# 3D heat and salt budget terms (Griffies et al. Table L1) - monthly averages
 #==========================================================================
-# RMH: Note -> all 3D heat budget terms are only requested at priority 3, and only
-# as annual averages.
-# I plan to output them as annual averages for the first 4 cycles and
-# then as monthly averages over the last cycle.
 
-# RMH: General comment on budget terms - they relate snapshots of
-# tracer fields, not time averages. As far as I can see there are no
-# snapshots of tracer fields saved (or requested from OMIP). These could
-# be useful.
-#
 # rho*tracer integrals:
  "ocean_model", "salt_int_rhodz", "salt_int_rhodz", "ocean_budget", "all", .true., "none", 2
  "ocean_model", "temp_int_rhodz", "temp_int_rhodz", "ocean_budget", "all", .true., "none", 2
@@ -477,10 +471,11 @@ ACCESS-OM2
 # RMH: sfc_hflux_pme included above.
  "ocean_model","frazil_3d","frazil_3d"                                          ,"ocean_budget","all",.true.,"none",2
  "ocean_model","temp_eta_smooth","temp_eta_smooth"                  ,"ocean_budget","all",.true.,"none",2
-# RMH: temp_rivermix currently included above.
+# RMH: temp_rivermix included above.
  "ocean_model","neutral_diffusion_temp","neutral_diffusion_temp"    ,"ocean_budget","all",.true.,"none",2
  "ocean_model","neutral_gm_temp","neutral_gm_temp"                  ,"ocean_budget","all",.true.,"none",2
  "ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33"              ,"ocean_budget","all",.true.,"none",2
+# RMH: Following two are only active at 1-degree:
 # "ocean_model","mixdownslope_temp","mixdownslope_temp"  ,"ocean_budget","all",.true.,"none",2
 # "ocean_model","temp_sigma_diff","temp_sigma_diff"              ,"ocean_budget","all",.true.,"none",2
 # RMH: The above close the heat budget.
@@ -490,9 +485,11 @@ ACCESS-OM2
 "ocean_model", "mld", "mld", "ocean_snapshot", "all", "none", "none", 2
 "ocean_model", "dzt", "dzt", "ocean_snapshot", "all", "none", "none", 2
 "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_snapshot", "all", "none", "none", 2
+"ocean_model", "temp_mld","temp_mld","ocean_snapshot","all","none","none",2
+"ocean_model", "salt_mld","salt_mld","ocean_snapshot","all","none","none",2
 
 # RMH: Included for completeness
- "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget","all",.true.,"none",2
  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget","all",.true.,"none",2
 
 # 5. interior ocean salt budget
@@ -507,12 +504,12 @@ ACCESS-OM2
  "ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33"                    ,"ocean_budget","all",.true.,"none",2
  "ocean_model","salt_vdiffuse_sbc","salt_vdiffuse_sbc"                    ,"ocean_budget","all",.true.,"none",2
  "ocean_model","salt_rivermix","salt_rivermix"                      ,"ocean_budget","all",.true.,"none",2
- "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget","all",.true.,"none",2
- "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget","all",.true.,"none",2
 # RMH: The above close the salt budget.
 
 # RMH: Included for completeness
- "ocean_model","salt_vdiffuse_diff_cbt_conv","salt_vdiffuse_diff_cbt_conv"      ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","salt_vdiffuse_diff_cbt_conv","salt_vdiffuse_diff_cbt_conv"      ,"ocean_budget","all",.true.,"none",2
  "ocean_model","salt_rhodzt","salt_rhodzt"         ,"ocean_budget","all",.true.,"none",2
 
 #==========================================================================
@@ -528,7 +525,7 @@ ACCESS-OM2
 # Table H1: difvho
 # 
 # Rosetta stone: diff_cbt_s=ocean_vertical_salt_diffusivity
-"ocean_model","diff_cbt_s","diff_cbt_s" ,"ocean_budget","all",.true.,"none",2
+#"ocean_model","diff_cbt_s","diff_cbt_s" ,"ocean_budget","all",.true.,"none",2
 # Table H1: difvso
 #
 # XXX: Missing tendency of ocean potential energy content.
@@ -539,10 +536,10 @@ ACCESS-OM2
 #==========================================================================
 #
 # Rosetta stone: aredi=ocean_tracer_epineutral_laplacian_diffusivity
- "ocean_model","aredi","aredi" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","aredi","aredi" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: agm=ocean_tracer_bolus_laplacian_diffusivity
- "ocean_model","agm","agm" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","agm","agm" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: ocean_tracer_bolus_biharmonic_diffusivity = 0.0
 #
@@ -553,20 +550,20 @@ ACCESS-OM2
 # Rosetta stone: ocean_tracer_xy_biharmonic_diffusivity = 0.0
 #
 # Rosetta stone: gm_eddy_ke_source=tendency_of_ocean_eddy_kinetic_energy_content_due_to_bolus_transport
- "ocean_model","gm_eddy_ke_source","gm_eddy_ke_source" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","gm_eddy_ke_source","gm_eddy_ke_source" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: aiso_lap=ocean_momentum_xy_laplacian_diffusivity
 # "ocean_model","aiso_lap","aiso_lap" ,"ocean_budget","all",.true.,"none",2
 # RMH: ACCESS-OM2 uses biharmonic friction
 # 
 # Rosetta stone: aiso_bih=ocean_momentum_xy_biharmonic_diffusivity
- "ocean_model","aiso_bih","aiso_bih" ,"ocean_budget","all",.true.,"none",2
+# "ocean_model","aiso_bih","aiso_bih" ,"ocean_budget","all",.true.,"none",2
 #
 # Rosetta stone: ocean_kinetic_energy_dissipation_per_unit_area_due_to_xy_friction is
 # diagnosed from the sum of the following two fields 
 # "ocean_model","horz_lap_diss","horz_lap_diss" ,"ocean_budget",all,.true.,"none",2
 # RMH: ACCESS-OM2 uses biharmonic friction
- "ocean_model","horz_bih_diss","horz_bih_diss" ,"ocean_budget",all,.true.,"none",2
+# "ocean_model","horz_bih_diss","horz_bih_diss" ,"ocean_budget",all,.true.,"none",2
 #
 
 # #==========================================================================
@@ -578,12 +575,14 @@ ACCESS-OM2
  "ocean_model","bmf_v","bmf_v"                      ,"ocean_month","all",.true.,"none",2
 
 # Monthly squared velocity fields:
- "ocean_model", "vert_pv", "vert_pv", "ocean_month", "all", .true., "none", 2
- "ocean_model", "u", "usq", "ocean_month", "all", "pow02", "none", 2
- "ocean_model", "v", "vsq", "ocean_month", "all", "pow02", "none", 2
+# "ocean_model", "vert_pv", "vert_pv", "ocean_month", "all", .true., "none", 2
+# "ocean_model", "u", "usq", "ocean_month", "all", "pow02", "none", 2
+# "ocean_model", "v", "vsq", "ocean_month", "all", "pow02", "none", 2
 
 # Daily surface/bottom quantities:
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "temp_mld", "temp_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "salt_mld", "salt_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_max" ,"ocean_daily","all", "max" ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
@@ -637,14 +636,14 @@ ACCESS-OM2
 # Non-standard ACCESS-OM2 diagnostics from Andrew's 01-IAF run
 # #==========================================================================
 
-# monthly
-"ocean_model", "bih_fric_u", "bih_fric_u", "ocean_month", "all", "average", "none", 2
-"ocean_model", "bih_fric_v", "bih_fric_v", "ocean_month", "all", "average", "none", 2
-"ocean_model", "u_dot_grad_vert_pv", "u_dot_grad_vert_pv", "ocean_month", "all", "average", "none", 2
-"ocean_model", "ekman_we","ekman_we","ocean_month","all",.true.,"none",2
-"ocean_model", "eta_nonbouss","eta_nonbouss","ocean_month","all",.true.,"none",2
-"ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_month", "all", "max", "none", 2
-"ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_month", "all", "min", "none", 2
+# # monthly
+# "ocean_model", "bih_fric_u", "bih_fric_u", "ocean_month", "all", "average", "none", 2
+# "ocean_model", "bih_fric_v", "bih_fric_v", "ocean_month", "all", "average", "none", 2
+# "ocean_model", "u_dot_grad_vert_pv", "u_dot_grad_vert_pv", "ocean_month", "all", "average", "none", 2
+# "ocean_model", "ekman_we","ekman_we","ocean_month","all",.true.,"none",2
+# "ocean_model", "eta_nonbouss","eta_nonbouss","ocean_month","all",.true.,"none",2
+# "ocean_model", "surface_pot_temp", "surface_pot_temp_max", "ocean_month", "all", "max", "none", 2
+# "ocean_model", "surface_pot_temp", "surface_pot_temp_min", "ocean_month", "all", "min", "none", 2
 
 # daily
 "ocean_model", "frazil_3d_int_z", "frazil_3d_int_z", "ocean_daily", "all", "average", "none", 2
@@ -669,6 +668,8 @@ ACCESS-OM2
 "ocean_model", "dzt", "dzt", "ocean_snapshot_daily", "all", "none", "none", 2
 "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_snapshot_daily", "all", "none", "none", 2
 "ocean_model", "mld", "mld", "ocean_snapshot_daily", "all", "none", "none", 2
+"ocean_model", "temp_mld","temp_mld","ocean_snapshot_daily","all","none","none",2
+"ocean_model", "salt_mld","salt_mld","ocean_snapshot_daily","all","none","none",2
 
 ####========== Extra daily diagnostics for NA MHW project ===================
 
@@ -717,3 +718,19 @@ ACCESS-OM2
  "ocean_model","neutral_diffusion_in_mld_temp","neutral_diffusion_in_mld_temp"    ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","neutral_gm_in_mld_temp","neutral_gm_in_mld_temp"                  ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_vdiffuse_k33_in_mld","temp_vdiffuse_k33_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
+
+# Online MLD-salt budget terms:
+ "ocean_model","salt_tendency_in_mld","salt_tendency_in_mld"           ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_advection_in_mld","salt_advection_in_mld"                          ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_submeso_in_mld","salt_submeso_in_mld"             ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_vdiffuse_diff_cbt_in_mld","salt_vdiffuse_diff_cbt_in_mld"          ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_nonlocal_KPP_in_mld","salt_nonlocal_KPP_in_mld"                    ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","neutral_gm_in_mld_salt","neutral_gm_in_mld_salt"                        ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","neutral_diffusion_in_mld_salt","neutral_diffusion_in_mld_salt"          ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_vdiffuse_k33_in_mld","salt_vdiffuse_k33_in_mld"                    ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_vdiffuse_sbc_in_mld","salt_vdiffuse_sbc_in_mld"                    ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_rivermix_in_mld","salt_rivermix_in_mld"                      ,"ocean_budget_daily","all",.true.,"none",2
+# "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget_daily","all",.true.,"none",2
+# "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget_daily","all",.true.,"none",2
+#
