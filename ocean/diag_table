@@ -19,6 +19,7 @@ ACCESS-OM2
 "ocean_scalar",                1,  "months", 1, "days", "time",
 "ocean_budget",                1,  "months", 1, "days", "time",
 "ocean_budget_daily",         24,  "hours",  1, "days", "time",
+"ocean_budget_daily_risavg",  24,  "hours",  1, "days", "time",
 "ocean_snapshot",              1,  "months", 1, "days", "time",
 "ocean_snapshot_daily",       24,  "hours",  1, "days", "time"
 
@@ -735,4 +736,43 @@ ACCESS-OM2
  "ocean_model","salt_rivermix_in_mld","salt_rivermix_in_mld"                      ,"ocean_budget_daily","all",.true.,"none",2
 # "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget_daily","all",.true.,"none",2
 # "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget_daily","all",.true.,"none",2
+
+# Rising average versions of all of above diagnostics:
+ "ocean_model", "pme_river", "pme_river", "ocean_budget_daily_risavg", "all", "fwd_risavg", "none", 2
+ "ocean_model", "sfc_hflux_coupler", "sfc_hflux_coupler", "ocean_budget_daily_risavg", "all", "fwd_risavg", "none", 2
+ "ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_budget_daily_risavg", "all", "fwd_risavg", "none", 2
+ "ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_budget_daily_risavg", "all", "fwd_risavg", "none", 2
+ "ocean_model","lw_heat","lw_heat" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","evap_heat","evap_heat" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","sens_heat","sens_heat" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","swflx","swflx" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ 
+ "ocean_model","temp_tendency_in_mld","temp_tendency_in_mld"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_advection_in_mld","temp_advection_in_mld"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_submeso_in_mld","temp_submeso_in_mld"             ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_vdiffuse_diff_cbt_in_mld","temp_vdiffuse_diff_cbt_in_mld"    ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_nonlocal_KPP_in_mld","temp_nonlocal_KPP_in_mld"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","sw_heat_in_mld","sw_heat_in_mld"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_vdiffuse_sbc_in_mld","temp_vdiffuse_sbc_in_mld"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","frazil_3d_in_mld","frazil_3d_in_mld"                                          ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_rivermix_in_mld","temp_rivermix_in_mld"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","neutral_diffusion_in_mld_temp","neutral_diffusion_in_mld_temp"    ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","neutral_gm_in_mld_temp","neutral_gm_in_mld_temp"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_vdiffuse_k33_in_mld","temp_vdiffuse_k33_in_mld"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","sfc_hflux_pme_in_mld","sfc_hflux_pme_in_mld"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","temp_eta_smooth_in_mld","temp_eta_smooth_in_mld"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+
+ "ocean_model","salt_tendency_in_mld","salt_tendency_in_mld"           ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_advection_in_mld","salt_advection_in_mld"                          ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_submeso_in_mld","salt_submeso_in_mld"             ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_vdiffuse_diff_cbt_in_mld","salt_vdiffuse_diff_cbt_in_mld"          ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_nonlocal_KPP_in_mld","salt_nonlocal_KPP_in_mld"                    ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","neutral_gm_in_mld_salt","neutral_gm_in_mld_salt"                        ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","neutral_diffusion_in_mld_salt","neutral_diffusion_in_mld_salt"          ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_vdiffuse_k33_in_mld","salt_vdiffuse_k33_in_mld"                    ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_vdiffuse_sbc_in_mld","salt_vdiffuse_sbc_in_mld"                    ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_rivermix_in_mld","salt_rivermix_in_mld"                      ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+# "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+# "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
 #
