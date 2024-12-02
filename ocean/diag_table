@@ -198,6 +198,8 @@ ACCESS-OM2
  "ocean_model","mld","mld" ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_mld","temp_mld" ,"ocean_month","all",.true.,"none",2
  "ocean_model","salt_mld","salt_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","temp_avg_mld","temp_avg_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","salt_avg_mld","salt_avg_mld" ,"ocean_month","all",.true.,"none",2
 # Table H1: mlotst
 #
 # Rosetta stone: mld=ocean_mixed_layer_thickness_defined_by_sigma_t
@@ -585,6 +587,8 @@ ACCESS-OM2
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "temp_mld", "temp_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "salt_mld", "salt_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "temp_avg_mld", "temp_avg_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "salt_avg_mld", "salt_avg_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_max" ,"ocean_daily","all", "max" ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
