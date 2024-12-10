@@ -200,6 +200,8 @@ ACCESS-OM2
  "ocean_model","salt_mld","salt_mld" ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_avg_mld","temp_avg_mld" ,"ocean_month","all",.true.,"none",2
  "ocean_model","salt_avg_mld","salt_avg_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","temp_in_mld","temp_in_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","salt_in_mld","salt_in_mld" ,"ocean_month","all",.true.,"none",2
 # Table H1: mlotst
 #
 # Rosetta stone: mld=ocean_mixed_layer_thickness_defined_by_sigma_t
@@ -589,6 +591,8 @@ ACCESS-OM2
  "ocean_model", "salt_mld", "salt_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "temp_avg_mld", "temp_avg_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "salt_avg_mld", "salt_avg_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "temp_in_mld", "temp_in_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "salt_in_mld", "salt_in_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_max" ,"ocean_daily","all", "max" ,"none",2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "mld","mld_min" ,"ocean_daily","all", min ,"none",2
@@ -677,6 +681,10 @@ ACCESS-OM2
 "ocean_model", "mld", "mld", "ocean_snapshot_daily", "all", "none", "none", 2
 "ocean_model", "temp_mld","temp_mld","ocean_snapshot_daily","all","none","none",2
 "ocean_model", "salt_mld","salt_mld","ocean_snapshot_daily","all","none","none",2
+"ocean_model", "temp_avg_mld","temp_avg_mld","ocean_snapshot_daily","all","none","none",2
+"ocean_model", "salt_avg_mld","salt_avg_mld","ocean_snapshot_daily","all","none","none",2
+"ocean_model", "temp_in_mld","temp_in_mld","ocean_snapshot_daily","all","none","none",2
+"ocean_model", "salt_in_mld","salt_in_mld","ocean_snapshot_daily","all","none","none",2
 
 ####========== Extra daily diagnostics for NA MHW project ===================
 
@@ -758,6 +766,9 @@ ACCESS-OM2
  "ocean_model","sens_heat","sens_heat" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","swflx","swflx" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","net_sfc_heating","net_sfc_heating" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ 
+ # 3D as a check:
+ "ocean_model","temp_tendency","temp_tendency"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  
  "ocean_model","temp_tendency_in_mld","temp_tendency_in_mld"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","temp_advection_in_mld","temp_advection_in_mld"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
