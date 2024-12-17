@@ -16,7 +16,7 @@ SYNCDIR=/g/data/e14/rmh561/access-om2/archive/025deg_jra55_iaf_cycle6_online_mlt
 
 exitcode=0
 help=false
-dirtype=restart #output
+dirtype=output
 exclude="--exclude *.nc.*"
 rsyncflags="-vrltoD --safe-links"
 rmlocal=false
