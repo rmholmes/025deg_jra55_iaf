@@ -3,7 +3,7 @@
 #PBS -l ncpus=1
 #PBS -l wd
 #PBS -l walltime=4:00:00,mem=4GB
-#PBS -l storage=gdata/hh5+gdata/ik11+scratch/v45+scratch/e14+gdata/e14
+#PBS -l storage=gdata/xp65+gdata/ik11+scratch/v45+scratch/e14+gdata/e14
 #PBS -N sync
 
 # Set SYNCDIR to the path you want your data copied to.
@@ -124,7 +124,7 @@ else
 
     # update and sync run summary - do this last in case it doesn't work
     cd $sourcepath
-    module use /g/data/hh5/public/modules
+    module use /g/data/xp65/public/modules
     module load conda/analysis3
     module load python3-as-python
     ./run_summary.py --no_header

@@ -20,9 +20,11 @@ ACCESS-OM2
 "ocean_scalar",                1,  "months", 1, "days", "time",
 "ocean_budget_month",          1,  "months", 1, "days", "time",
 "ocean_budget_month_risavg",   1,  "months", 1, "days", "time",
+"ocean_budget_month_3d",       1,  "months", 1, "days", "time",
 "ocean_budget_daily",         24,  "hours",  1, "days", "time",
 "ocean_budget_daily_risavg",  24,  "hours",  1, "days", "time",
-"ocean_snapshot_month",      1,  "months", 1, "days", "time",
+"ocean_budget_daily_3d",      24,  "hours",  1, "days", "time",
+"ocean_snapshot_month",       1,  "months", 1, "days", "time",
 "ocean_snapshot_daily",       24,  "hours",  1, "days", "time"
 
 #==========================================================================
@@ -191,59 +193,51 @@ ACCESS-OM2
 # #==========================================================================
 
 # # Interior ocean heat budget:
-#  "ocean_model","temp_tendency","temp_tendency"           ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","temp_advection","temp_advection"                    ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","temp_submeso","temp_submeso"             ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt"    ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","temp_nonlocal_KPP","temp_nonlocal_KPP"              ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","sw_heat","sw_heat" ,"ocean_month","all",.true.,"none",2
-#  "ocean_model","temp_rivermix","temp_rivermix" ,"ocean_month","all",.true.,"none",2
-#  "ocean_model","temp_vdiffuse_sbc","temp_vdiffuse_sbc"              ,"ocean_budget_month","all",.true.,"none",2
-# # RMH: sfc_hflux_pme included above.
-#  "ocean_model","frazil_3d","frazil_3d"                                          ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","temp_eta_smooth","temp_eta_smooth"                  ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","neutral_diffusion_temp","neutral_diffusion_temp"    ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","neutral_gm_temp","neutral_gm_temp"                  ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33"              ,"ocean_budget_month","all",.true.,"none",2
+"ocean_model","temp_tendency","temp_tendency"           ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_advection","temp_advection"                    ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_submeso","temp_submeso"             ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt"    ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_nonlocal_KPP","temp_nonlocal_KPP"              ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","sw_heat","sw_heat" ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_rivermix","temp_rivermix" ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_vdiffuse_sbc","temp_vdiffuse_sbc"              ,"ocean_budget_month_3d","all",.true.,"none",2
+# RMH: sfc_hflux_pme included above.
+"ocean_model","frazil_3d","frazil_3d"                                          ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_eta_smooth","temp_eta_smooth"                  ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","neutral_diffusion_temp","neutral_diffusion_temp"    ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","neutral_gm_temp","neutral_gm_temp"                  ,"ocean_budget_month_3d","all",.true.,"none",2
+"ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33"              ,"ocean_budget_month_3d","all",.true.,"none",2
 # # RMH: Following two are only active at 1-degree:
-# # "ocean_model","mixdownslope_temp","mixdownslope_temp"  ,"ocean_budget_month","all",.true.,"none",2
-# # "ocean_model","temp_sigma_diff","temp_sigma_diff"              ,"ocean_budget_month","all",.true.,"none",2
+# # "ocean_model","mixdownslope_temp","mixdownslope_temp"  ,"ocean_budget_month_3d","all",.true.,"none",2
+# # "ocean_model","temp_sigma_diff","temp_sigma_diff"              ,"ocean_budget_month_3d","all",.true.,"none",2
 # # RMH: The above close the heat budget.
 
 # # Snapshots to close budgets offline:
-# "ocean_model", "temp", "temp", "ocean_snapshot_month", "all", "none", "none", 2
-# "ocean_model", "salt", "salt", "ocean_snapshot_month", "all", "none", "none", 2
-# "ocean_model", "mld", "mld", "ocean_snapshot_month", "all", "none", "none", 2
-# "ocean_model", "dzt", "dzt", "ocean_snapshot_month", "all", "none", "none", 2
-# "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_snapshot_month", "all", "none", "none", 2
-# #"ocean_model", "temp_mld","temp_mld","ocean_snapshot_month","all","none","none",2
-# #"ocean_model", "salt_mld","salt_mld","ocean_snapshot_month","all","none","none",2
-# "ocean_model", "temp_in_mld","temp_in_mld","ocean_snapshot_month","all","none","none",2
-# "ocean_model", "salt_in_mld","salt_in_mld","ocean_snapshot_month","all","none","none",2
+# RMH: mld, temp_in_mld and salt_in_mld are already contained below
 
 # # RMH: Included for completeness
-# # "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget_month","all",.true.,"none",2
+# # "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget_month_3d","all",.true.,"none",2
 
 # # 5. interior ocean salt budget
-#  "ocean_model","salt_tendency","salt_tendency"           ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_advection","salt_advection"                          ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_submeso","salt_submeso"             ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_vdiffuse_diff_cbt","salt_vdiffuse_diff_cbt"          ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_nonlocal_KPP","salt_nonlocal_KPP"                    ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","neutral_gm_salt","neutral_gm_salt"                        ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","neutral_diffusion_salt","neutral_diffusion_salt"          ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33"                    ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_vdiffuse_sbc","salt_vdiffuse_sbc"                    ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_rivermix","salt_rivermix"                      ,"ocean_budget_month","all",.true.,"none",2
-# # "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget_month","all",.true.,"none",2
-# # "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget_month","all",.true.,"none",2
+#  "ocean_model","salt_tendency","salt_tendency"           ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_advection","salt_advection"                          ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_submeso","salt_submeso"             ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_vdiffuse_diff_cbt","salt_vdiffuse_diff_cbt"          ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_nonlocal_KPP","salt_nonlocal_KPP"                    ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","neutral_gm_salt","neutral_gm_salt"                        ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","neutral_diffusion_salt","neutral_diffusion_salt"          ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33"                    ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_vdiffuse_sbc","salt_vdiffuse_sbc"                    ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_rivermix","salt_rivermix"                      ,"ocean_budget_month_3d","all",.true.,"none",2
+# # "ocean_model","salt_sigma_diff","salt_sigma_diff"              ,"ocean_budget_month_3d","all",.true.,"none",2
+# # "ocean_model","mixdownslope_salt","mixdownslope_salt"  ,"ocean_budget_month_3d","all",.true.,"none",2
 # # RMH: The above close the salt budget.
 
 # # RMH: Included for completeness
-# # "ocean_model","salt_vdiffuse_diff_cbt_conv","salt_vdiffuse_diff_cbt_conv"      ,"ocean_budget_month","all",.true.,"none",2
-#  "ocean_model","salt_rhodzt","salt_rhodzt"         ,"ocean_budget_month","all",.true.,"none",2
+# # "ocean_model","salt_vdiffuse_diff_cbt_conv","salt_vdiffuse_diff_cbt_conv"      ,"ocean_budget_month_3d","all",.true.,"none",2
+#  "ocean_model","salt_rhodzt","salt_rhodzt"         ,"ocean_budget_month_3d","all",.true.,"none",2
 
 
 #==========================================================================
@@ -324,52 +318,34 @@ ACCESS-OM2
 #==========================================================================
 
 # # Interior ocean heat budget:
-#  "ocean_model","temp_tendency","temp_tendency"           ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_advection","temp_advection"                    ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_submeso","temp_submeso"             ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt"    ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_nonlocal_KPP","temp_nonlocal_KPP"              ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","sw_heat","sw_heat"              ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_vdiffuse_sbc","temp_vdiffuse_sbc"              ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","sfc_hflux_pme","sfc_hflux_pme"              ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","frazil_3d","frazil_3d"                                          ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_eta_smooth","temp_eta_smooth"                  ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_rivermix","temp_rivermix"              ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","neutral_diffusion_temp","neutral_diffusion_temp"    ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","neutral_gm_temp","neutral_gm_temp"                  ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33"              ,"ocean_budget_daily","all",.true.,"none",2
-# # "ocean_model","mixdownslope_temp","mixdownslope_temp"  ,"ocean_budget_daily","all",.true.,"none",2
-# # "ocean_model","temp_sigma_diff","temp_sigma_diff"              ,"ocean_budget_daily","all",.true.,"none",2
+"ocean_model","temp_tendency","temp_tendency"           ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_advection","temp_advection"                    ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_submeso","temp_submeso"             ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt"    ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_nonlocal_KPP","temp_nonlocal_KPP"              ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","sw_heat","sw_heat"              ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_vdiffuse_sbc","temp_vdiffuse_sbc"              ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","sfc_hflux_pme","sfc_hflux_pme"              ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","frazil_3d","frazil_3d"                                          ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_eta_smooth","temp_eta_smooth"                  ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_rivermix","temp_rivermix"              ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","neutral_diffusion_temp","neutral_diffusion_temp"    ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","neutral_gm_temp","neutral_gm_temp"                  ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33"              ,"ocean_budget_daily_3d","all",.true.,"none",2
+# # "ocean_model","mixdownslope_temp","mixdownslope_temp"  ,"ocean_budget_daily_3d","all",.true.,"none",2
+# # "ocean_model","temp_sigma_diff","temp_sigma_diff"              ,"ocean_budget_daily_3d","all",.true.,"none",2
 # # RMH: The above close the heat budget.
 
-#  # Rising averages as a check:
-#  "ocean_model","temp_tendency","temp_tendency"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
-#  "ocean_model","temp","temp"                  ,"ocean_daily","all",.true.,"none",2
-
 # # RMH: Included for completeness
-#  "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget_daily","all",.true.,"none",2
-#  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget_daily","all",.true.,"none",2
-
-# # advective horizontal heat fluxes:
-#  #"ocean_model","temp_xflux_adv","temp_xflux_adv"         ,"ocean_budget_month","all",.true.,"none",2
-#  #"ocean_model","temp_yflux_adv","temp_yflux_adv"         ,"ocean_budget_month","all",.true.,"none",2
+#  "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget_daily_3d","all",.true.,"none",2
+#  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget_daily_3d","all",.true.,"none",2
 
 # # Daily density and dzt to compute MLD:
 # "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_daily", "all", "average", "none", 2
 # "ocean_model", "dzt", "dzt", "ocean_daily", "all", "average", "none", 2
 
 # Snapshots to close budgets offline usnig standard averaging:
-# "ocean_model", "temp", "temp", "ocean_snapshot_daily", "all", "none", "none", 2
-# "ocean_model", "salt", "salt", "ocean_snapshot_daily", "all", "none", "none", 2
-# "ocean_model", "dzt", "dzt", "ocean_snapshot_daily", "all", "none", "none", 2
-# "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_snapshot_daily", "all", "none", "none", 2
-# #"ocean_model", "temp_mld","temp_mld","ocean_snapshot_daily","all","none","none",2
-# #"ocean_model", "salt_mld","salt_mld","ocean_snapshot_daily","all","none","none",2
-# #"ocean_model", "temp_avg_mld","temp_avg_mld","ocean_snapshot_daily","all","none","none",2
-# #"ocean_model", "salt_avg_mld","salt_avg_mld","ocean_snapshot_daily","all","none","none",2
-# "ocean_model", "mld", "mld", "ocean_snapshot_daily", "all", "none", "none", 2
-# "ocean_model", "temp_in_mld","temp_in_mld","ocean_snapshot_daily","all","none","none",2
-# "ocean_model", "salt_in_mld","salt_in_mld","ocean_snapshot_daily","all","none","none",2
+# RMH: mld, temp_in_mld and salt_in_mld are already contained below
 
 #==========================================================================
 # Online mixed layer integrated diagnostics - daily averages
