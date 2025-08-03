@@ -340,9 +340,9 @@ ACCESS-OM2
 #  "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget_daily_3d","all",.true.,"none",2
 #  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget_daily_3d","all",.true.,"none",2
 
-# # Daily density and dzt to compute MLD:
+# # Daily density and dzt to compute MLD and do binning:
 # "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_daily", "all", "average", "none", 2
-# "ocean_model", "dzt", "dzt", "ocean_daily", "all", "average", "none", 2
+"ocean_model", "dzt", "dzt", "ocean_budget_daily_3d", "all", "average", "none", 2
 
 # Snapshots to close budgets offline usnig standard averaging:
 # RMH: mld, temp_in_mld and salt_in_mld are already contained below
