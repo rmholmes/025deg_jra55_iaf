@@ -1,0 +1,75 @@
+# PBS configuration
+# If submitting to a different project to your default, uncomment line below 
+# and change project code as appropriate; also set shortpath below
+project: e14
+
+# Force payu to always find, and save, files in this scratch project directory
+# (you may need to add the corresponding PBS -l storage flag in sync_data.sh)
+shortpath: /scratch/e14
+
+queue: normal
+walltime: 5:00:00
+jobname: 025deg_mlt_cy6
+
+# Model configuration
+name: common
+model: access-om2
+input: /g/data/ik11/inputs/access-om2/input_20201102/common_025deg_jra55
+submodels:
+    - name: atmosphere
+      model: yatm
+      exe: /g/data/ik11/inputs/access-om2/bin/yatm_a9d4b67.exe
+      input:
+            - /g/data/ik11/inputs/access-om2/input_20201102/yatm_025deg
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/rsds/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/rlds/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/prra/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/prsn/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/psl/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/land/day/friver/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/tas/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/huss/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/uas/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/vas/gr/v20200916
+            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/landIce/day/licalvf/gr/v20200916
+      ncpus: 1
+
+    - name: ocean
+      model: mom
+      exe: /g/data/e14/rmh561/access-om2/bin/fms_ACCESS-OM_82d6cee_libaccessom2_a9d4b67.x
+      input:
+            - /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
+      ncpus: 1455
+
+    - name: ice
+      model: cice5
+      exe: /g/data/ik11/inputs/access-om2/bin/cice_auscom_1440x1080_480p_26e6159_libaccessom2_a9d4b67.exe
+      input: /g/data/ik11/inputs/access-om2/input_20201102/cice_025deg
+      ncpus: 361
+
+# Collation
+collate:
+  restart: true
+  mpi: true
+  walltime: 1:00:00
+  mem: 16GB
+  ncpus: 4
+  queue: normal
+  exe: /g/data/ik11/inputs/access-om2/bin/mppnccombine-fast
+
+# Misc
+runlog: true
+stacksize: unlimited
+restart_freq: 1  # use tidy_restarts.py instead
+mpirun: --mca orte_base_help_aggregate 0
+qsub_flags: -W umask=027
+# set number of cores per node (28 for normalbw, 48 for normal on gadi)
+platform:
+    nodesize: 48
+# sweep and resubmit on specific errors - see https://github.com/payu-org/payu/issues/241#issuecomment-610739771
+userscripts:
+    error: resub.sh
+    run: rm -f resubmit.count
+
+# DANGER! Do not uncomment this without checking the script is syncing to the correct location!
+# postscript: sync_data.sh
