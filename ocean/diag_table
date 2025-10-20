@@ -102,10 +102,10 @@ ACCESS-OM2
  "ocean_model","tx_trans","tx_trans" ,"ocean_month","all",.true.,"none",2
  "ocean_model","ty_trans","ty_trans" ,"ocean_month","all",.true.,"none",2
 # "ocean_model","tz_trans","tz_trans" ,"ocean_month","all",.true.,"none",2
-# "ocean_model","tx_trans_gm","tx_trans_gm"           ,"ocean_month","all",.true.,"none",2
-# "ocean_model","ty_trans_gm","ty_trans_gm"           ,"ocean_month","all",.true.,"none",2
-# "ocean_model","tx_trans_submeso","tx_trans_submeso" ,"ocean_month","all",.true.,"none",2
-# "ocean_model","ty_trans_submeso","ty_trans_submeso" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","tx_trans_gm","tx_trans_gm"           ,"ocean_month","all",.true.,"none",2
+ "ocean_model","ty_trans_gm","ty_trans_gm"           ,"ocean_month","all",.true.,"none",2
+ "ocean_model","tx_trans_submeso","tx_trans_submeso" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","ty_trans_submeso","ty_trans_submeso" ,"ocean_month","all",.true.,"none",2
 # "ocean_model","tx_trans_rho","tx_trans_rho"         ,"ocean_month","all",.true.,"none",2
 # "ocean_model","ty_trans_rho","ty_trans_rho"         ,"ocean_month","all",.true.,"none",2
 # "ocean_model","tx_trans_rho_gm","tx_trans_rho_gm"   ,"ocean_month","all",.true.,"none",2
@@ -406,7 +406,7 @@ ACCESS-OM2
  "ocean_model","salt_submeso_in_mld","salt_submeso_in_mld"             ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","salt_vdiffuse_diff_cbt_in_mld","salt_vdiffuse_diff_cbt_in_mld"          ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","salt_nonlocal_KPP_in_mld","salt_nonlocal_KPP_in_mld"                    ,"ocean_budget_daily","all",.true.,"none",2
- "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","salt_eta_smooth_in_mld","salt_eta_smooth_in_mld"                        ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","neutral_gm_in_mld_salt","neutral_gm_in_mld_salt"                        ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","neutral_diffusion_in_mld_salt","neutral_diffusion_in_mld_salt"          ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","salt_vdiffuse_k33_in_mld","salt_vdiffuse_k33_in_mld"                    ,"ocean_budget_daily","all",.true.,"none",2
@@ -421,7 +421,7 @@ ACCESS-OM2
  "ocean_model","salt_submeso_in_mld","salt_submeso_in_mld"             ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","salt_vdiffuse_diff_cbt_in_mld","salt_vdiffuse_diff_cbt_in_mld"          ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","salt_nonlocal_KPP_in_mld","salt_nonlocal_KPP_in_mld"                    ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
- "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_eta_smooth_in_mld","salt_eta_smooth_in_mld"                        ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","neutral_gm_in_mld_salt","neutral_gm_in_mld_salt"                        ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","neutral_diffusion_in_mld_salt","neutral_diffusion_in_mld_salt"          ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","salt_vdiffuse_k33_in_mld","salt_vdiffuse_k33_in_mld"                    ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
@@ -495,7 +495,7 @@ ACCESS-OM2
  "ocean_model","salt_submeso_in_mld","salt_submeso_in_mld"             ,"ocean_budget_month","all",.true.,"none",2
  "ocean_model","salt_vdiffuse_diff_cbt_in_mld","salt_vdiffuse_diff_cbt_in_mld"          ,"ocean_budget_month","all",.true.,"none",2
  "ocean_model","salt_nonlocal_KPP_in_mld","salt_nonlocal_KPP_in_mld"                    ,"ocean_budget_month","all",.true.,"none",2
- "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_month","all",.true.,"none",2
+ "ocean_model","salt_eta_smooth_in_mld","salt_eta_smooth_in_mld"                        ,"ocean_budget_month","all",.true.,"none",2
  "ocean_model","neutral_gm_in_mld_salt","neutral_gm_in_mld_salt"                        ,"ocean_budget_month","all",.true.,"none",2
  "ocean_model","neutral_diffusion_in_mld_salt","neutral_diffusion_in_mld_salt"          ,"ocean_budget_month","all",.true.,"none",2
  "ocean_model","salt_vdiffuse_k33_in_mld","salt_vdiffuse_k33_in_mld"                    ,"ocean_budget_month","all",.true.,"none",2
@@ -510,7 +510,7 @@ ACCESS-OM2
  "ocean_model","salt_submeso_in_mld","salt_submeso_in_mld"             ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
  "ocean_model","salt_vdiffuse_diff_cbt_in_mld","salt_vdiffuse_diff_cbt_in_mld"          ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
  "ocean_model","salt_nonlocal_KPP_in_mld","salt_nonlocal_KPP_in_mld"                    ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
- "ocean_model","salt_eta_smooth","salt_eta_smooth"                        ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
+ "ocean_model","salt_eta_smooth_in_mld","salt_eta_smooth_in_mld"                        ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
  "ocean_model","neutral_gm_in_mld_salt","neutral_gm_in_mld_salt"                        ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
  "ocean_model","neutral_diffusion_in_mld_salt","neutral_diffusion_in_mld_salt"          ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
  "ocean_model","salt_vdiffuse_k33_in_mld","salt_vdiffuse_k33_in_mld"                    ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
