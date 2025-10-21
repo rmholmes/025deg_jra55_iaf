@@ -120,6 +120,7 @@ ACCESS-OM2
 # To close the free-surface budget (as a test):
 "ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_month","all",.true.,"none",2
 "ocean_model","eta_smoother","eta_smoother" ,"ocean_month","all",.true.,"none",2
+"ocean_model","conv_rho_ud_t","conv_rho_ud_t" ,"ocean_month","all",.true.,"none",2
  
 # "ocean_model","diff_cbt_t","diff_cbt_t" ,"ocean_budget_month","all",.true.,"none",2
 
@@ -273,6 +274,10 @@ ACCESS-OM2
  "ocean_model", "sfc_hflux_coupler", "sfc_hflux_coupler", "ocean_daily", "all", "average", "none", 2
  "ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_daily", "all", "average", "none", 2
  "ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_daily", "all", "average", "none", 2
+
+"ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_daily","all",.true.,"none",2
+"ocean_model","eta_smoother","eta_smoother" ,"ocean_daily","all",.true.,"none",2
+"ocean_model","conv_rho_ud_t","conv_rho_ud_t" ,"ocean_daily","all",.true.,"none",2
 
 # Daily 3D quantities for Neil:
 #"ocean_model", "temp", "temp", "ocean_daily_3d", "all", .true., "none", 2
