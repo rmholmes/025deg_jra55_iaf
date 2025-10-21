@@ -116,7 +116,8 @@ ACCESS-OM2
  "ocean_model","ty_trans_int_z","ty_trans_int_z"     ,"ocean_month","all",.true.,"none",2
 # "ocean_model","psiu","psiu" ,"ocean_month","all",.true.,"none",2
 # "ocean_model","psiv","psiv","ocean_month","all",.true.,"none",2
-
+"ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_month","all",.true.,"none",2
+ 
 # "ocean_model","diff_cbt_t","diff_cbt_t" ,"ocean_budget_month","all",.true.,"none",2
 
  "ocean_model","temp_xflux_adv_int_z","temp_xflux_adv_int_z"                                ,"ocean_month","all",.true.,"none",2
