@@ -173,6 +173,7 @@ ACCESS-OM2
  "ocean_model","net_sfc_heating","net_sfc_heating"                              ,"ocean_month","all",.true.,"none",2
  "ocean_model","sfc_hflux_coupler","sfc_hflux_coupler"                      ,"ocean_month","all",.true.,"none",2
  "ocean_model","sfc_hflux_pme","sfc_hflux_pme"                              ,"ocean_month","all",.true.,"none",2
+ "ocean_model","sfc_salt_flux_pme","sfc_salt_flux_pme"                      ,"ocean_month","all",.true.,"none",2
 
 #==========================================================================
 # Monthly-average scalar diagnostics
@@ -274,10 +275,11 @@ ACCESS-OM2
  "ocean_model", "sfc_hflux_coupler", "sfc_hflux_coupler", "ocean_daily", "all", "average", "none", 2
  "ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_daily", "all", "average", "none", 2
  "ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_daily", "all", "average", "none", 2
+ "ocean_model","sfc_salt_flux_pme","sfc_salt_flux_pme", "ocean_daily","all", "average","none",2
 
-"ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_daily","all",.true.,"none",2
-"ocean_model","eta_smoother","eta_smoother" ,"ocean_daily","all",.true.,"none",2
-"ocean_model","conv_rho_ud_t","conv_rho_ud_t" ,"ocean_daily","all",.true.,"none",2
+#"ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_daily","all",.true.,"none",2
+#"ocean_model","eta_smoother","eta_smoother" ,"ocean_daily","all",.true.,"none",2
+#"ocean_model","conv_rho_ud_t","conv_rho_ud_t" ,"ocean_daily","all",.true.,"none",2
 
 # Daily 3D quantities for Neil:
 #"ocean_model", "temp", "temp", "ocean_daily_3d", "all", .true., "none", 2
@@ -376,7 +378,8 @@ ACCESS-OM2
  "ocean_model","temp_vdiffuse_k33_in_mld","temp_vdiffuse_k33_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","sfc_hflux_pme_in_mld","sfc_hflux_pme_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","temp_eta_smooth_in_mld","temp_eta_smooth_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
-
+ "ocean_model","sfc_salt_flux_pme_in_mld","sfc_salt_flux_pme_in_mld"              ,"ocean_budget_daily","all",.true.,"none",2
+ 
  # Heat budget - rising averages:
  "ocean_model","temp_tendency_in_mld","temp_tendency_in_mld"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","temp_advection_in_mld","temp_advection_in_mld"                  ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
