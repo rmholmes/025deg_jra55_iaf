@@ -117,9 +117,9 @@ ACCESS-OM2
 # "ocean_model","psiu","psiu" ,"ocean_month","all",.true.,"none",2
 # "ocean_model","psiv","psiv","ocean_month","all",.true.,"none",2
 
-# To close the free-surface budget (as a test):
-# "ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_month","all",.true.,"none",2
-# "ocean_model","eta_smoother","eta_smoother" ,"ocean_month","all",.true.,"none",2
+# To close the free-surface budget and do monthly-offline corrections:
+"ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_month","all",.true.,"none",2
+"ocean_model","eta_smoother","eta_smoother" ,"ocean_month","all",.true.,"none",2
 # "ocean_model","conv_rho_ud_t","conv_rho_ud_t" ,"ocean_month","all",.true.,"none",2
  
 # "ocean_model","diff_cbt_t","diff_cbt_t" ,"ocean_budget_month","all",.true.,"none",2
@@ -275,10 +275,6 @@ ACCESS-OM2
  "ocean_model", "sfc_hflux_from_runoff", "sfc_hflux_from_runoff", "ocean_daily", "all", "average", "none", 2
  "ocean_model", "sfc_hflux_pme", "sfc_hflux_pme", "ocean_daily", "all", "average", "none", 2
  
-#"ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_daily","all",.true.,"none",2
-#"ocean_model","eta_smoother","eta_smoother" ,"ocean_daily","all",.true.,"none",2
-#"ocean_model","conv_rho_ud_t","conv_rho_ud_t" ,"ocean_daily","all",.true.,"none",2
-
 # Daily 3D quantities for Neil:
 #"ocean_model", "temp", "temp", "ocean_daily_3d", "all", .true., "none", 2
 #"ocean_model", "salt", "salt", "ocean_daily_3d", "all", .true., "none", 2
@@ -326,7 +322,7 @@ ACCESS-OM2
 # 3D Heat and salt budgets daily averages
 #==========================================================================
 
-# # Interior ocean heat budget:
+# Interior ocean heat budget:
 "ocean_model","temp_tendency","temp_tendency"           ,"ocean_budget_daily_3d","all",.true.,"none",2
 "ocean_model","temp_advection","temp_advection"                    ,"ocean_budget_daily_3d","all",.true.,"none",2
 "ocean_model","temp_submeso","temp_submeso"             ,"ocean_budget_daily_3d","all",.true.,"none",2
@@ -342,16 +338,22 @@ ACCESS-OM2
 "ocean_model","neutral_gm_temp","neutral_gm_temp"                  ,"ocean_budget_daily_3d","all",.true.,"none",2
 "ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33"              ,"ocean_budget_daily_3d","all",.true.,"none",2
 # # "ocean_model","mixdownslope_temp","mixdownslope_temp"  ,"ocean_budget_daily_3d","all",.true.,"none",2
-# # "ocean_model","temp_sigma_diff","temp_sigma_diff"              ,"ocean_budget_daily_3d","all",.true.,"none",2
+# # # "ocean_model","temp_sigma_diff","temp_sigma_diff"              ,"ocean_budget_daily_3d","all",.true.,"none",2
 # # RMH: The above close the heat budget.
 
 # # RMH: Included for completeness
-#  "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget_daily_3d","all",.true.,"none",2
-#  "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget_daily_3d","all",.true.,"none",2
+#  # "ocean_model","temp_vdiffuse_diff_cbt_conv","temp_vdiffuse_diff_cbt_conv"    ,"ocean_budget_daily_3d","all",.true.,"none",2
+#  # "ocean_model","temp_rhodzt","temp_rhodzt"         ,"ocean_budget_daily_3d","all",.true.,"none",2
 
 # # Daily density and dzt to compute MLD and do binning:
-# "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_daily", "all", "average", "none", 2
+# # "ocean_model", "pot_rho_0", "pot_rho_0", "ocean_daily", "all", "average", "none", 2
 "ocean_model", "dzt", "dzt", "ocean_budget_daily_3d", "all", "average", "none", 2
+
+# Daily corrections:
+"ocean_model","eta_t_tendency","eta_t_tendency" ,"ocean_budget_daily_3d","all",.true.,"none",2
+"ocean_model","eta_smoother","eta_smoother" ,"ocean_budget_daily_3d","all",.true.,"none",2
+# # "ocean_model","conv_rho_ud_t","conv_rho_ud_t" ,"ocean_budget_daily_3d","all",.true.,"none",2
+
 
 # Snapshots to close budgets offline usnig standard averaging:
 # RMH: mld, temp_in_mld and salt_in_mld are already contained below
