@@ -64,7 +64,7 @@ ACCESS-OM2
 
  "ocean_model","pbot_t","pbot_t" ,"ocean_month","all",.true.,"none",2
  "ocean_model","patm_t","patm_t" ,"ocean_month","all",.true.,"none",2
- "ocean_model","rho_dzt","rho_dzt" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","rho_dzt","rho_dzt" ,"ocean_month","all",.true.,"none",2
  "ocean_model","dzt","dzt" ,"ocean_month","all",.true.,"none",2
  "ocean_model","sea_level","sea_level" ,"ocean_month","all",.true.,"none",2
  "ocean_model","sea_level_sq","sea_level_sq" ,"ocean_month","all",.true.,"none",2
@@ -99,13 +99,13 @@ ACCESS-OM2
  "ocean_model","u","u"                       ,"ocean_month","all",.true.,"none",2
  "ocean_model","v","v"                       ,"ocean_month","all",.true.,"none",2
  "ocean_model","wt","wt"                     ,"ocean_month","all",.true.,"none",2
- "ocean_model","tx_trans","tx_trans" ,"ocean_month","all",.true.,"none",2
- "ocean_model","ty_trans","ty_trans" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tx_trans","tx_trans" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","ty_trans","ty_trans" ,"ocean_month","all",.true.,"none",2
 # "ocean_model","tz_trans","tz_trans" ,"ocean_month","all",.true.,"none",2
- "ocean_model","tx_trans_gm","tx_trans_gm"           ,"ocean_month","all",.true.,"none",2
- "ocean_model","ty_trans_gm","ty_trans_gm"           ,"ocean_month","all",.true.,"none",2
- "ocean_model","tx_trans_submeso","tx_trans_submeso" ,"ocean_month","all",.true.,"none",2
- "ocean_model","ty_trans_submeso","ty_trans_submeso" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tx_trans_gm","tx_trans_gm"           ,"ocean_month","all",.true.,"none",2
+# "ocean_model","ty_trans_gm","ty_trans_gm"           ,"ocean_month","all",.true.,"none",2
+# "ocean_model","tx_trans_submeso","tx_trans_submeso" ,"ocean_month","all",.true.,"none",2
+# "ocean_model","ty_trans_submeso","ty_trans_submeso" ,"ocean_month","all",.true.,"none",2
 # "ocean_model","tx_trans_rho","tx_trans_rho"         ,"ocean_month","all",.true.,"none",2
 # "ocean_model","ty_trans_rho","ty_trans_rho"         ,"ocean_month","all",.true.,"none",2
 # "ocean_model","tx_trans_rho_gm","tx_trans_rho_gm"   ,"ocean_month","all",.true.,"none",2
