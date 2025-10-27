@@ -1,7 +1,7 @@
 # PBS configuration
 # If submitting to a different project to your default, uncomment line below 
 # and change project code as appropriate; also set shortpath below
-project: e14
+project: m35
 
 # Force payu to always find, and save, files in this scratch project directory
 # (you may need to add the corresponding PBS -l storage flag in sync_data.sh)
@@ -47,7 +47,7 @@ submodels:
 
     - name: ocean
       model: mom
-      exe: /g/data/e14/rmh561/access-om2/bin/fms_ACCESS-OM_ae40bfe_libaccessom2_a9d4b67.x
+      exe: /g/data/e14/rmh561/access-om2/bin/fms_ACCESS-OM_f6fedc5_libaccessom2_a9d4b67.x
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
       ncpus: 1455
