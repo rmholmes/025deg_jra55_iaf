@@ -85,6 +85,7 @@ ACCESS-OM2
 
  "ocean_model","mld","mld" ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_in_mld","temp_in_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","temp_at_mlb","temp_at_mlb" ,"ocean_month","all",.true.,"none",2
  "ocean_model","salt_in_mld","salt_in_mld" ,"ocean_month","all",.true.,"none",2
  "ocean_model","mld","mld_max" ,"ocean_month","all", "max" ,"none",2
  #"ocean_model","mld","mld_min" ,"ocean_month","all", min ,"none",2
@@ -256,6 +257,7 @@ ACCESS-OM2
 # Daily surface/bottom quantities:
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "temp_in_mld", "temp_in_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "temp_at_mlb", "temp_at_mlb", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "salt_in_mld", "salt_in_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model","eta_t","eta_t","ocean_daily","all",.true.,"none",2
