@@ -85,7 +85,9 @@ ACCESS-OM2
 
  "ocean_model","mld","mld" ,"ocean_month","all",.true.,"none",2
  "ocean_model","temp_in_mld","temp_in_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","temp_at_mlb","temp_at_mlb" ,"ocean_month","all",.true.,"none",2
  "ocean_model","salt_in_mld","salt_in_mld" ,"ocean_month","all",.true.,"none",2
+ "ocean_model","salt_at_mlb","salt_at_mlb" ,"ocean_month","all",.true.,"none",2
  "ocean_model","mld","mld_max" ,"ocean_month","all", "max" ,"none",2
  #"ocean_model","mld","mld_min" ,"ocean_month","all", min ,"none",2
  #"ocean_model","mld_sq","mld_sq" ,"ocean_month","all",.true.,"none",2
@@ -256,7 +258,9 @@ ACCESS-OM2
 # Daily surface/bottom quantities:
  "ocean_model", "mld", "mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "temp_in_mld", "temp_in_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "temp_at_mlb", "temp_at_mlb", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "salt_in_mld", "salt_in_mld", "ocean_daily", "all", .true., "none", 2
+ "ocean_model", "salt_at_mlb", "salt_at_mlb", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "sea_level", "sea_level", "ocean_daily", "all", .true., "none", 2
  "ocean_model","eta_t","eta_t","ocean_daily","all",.true.,"none",2
  "ocean_model", "bottom_temp", "bottom_temp", "ocean_daily", "all", .true., "none", 2
@@ -407,6 +411,8 @@ ACCESS-OM2
  "ocean_model","pme_river_times_temp_in_mld","pme_river_times_temp_in_mld" ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","eta_t_tendency_times_temp_in_mld","eta_t_tendency_times_temp_in_mld" ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","eta_smoother_times_temp_in_mld","eta_smoother_times_temp_in_mld" ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","eta_t_tendency_times_temp_at_mlb","eta_t_tendency_times_temp_at_mlb" ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","s_surf_ent_temp","s_surf_ent_temp" ,"ocean_budget_daily","all",.true.,"none",2
  
  # Components of heat fluxes - rising averages:
  "ocean_model","lw_heat_in_mld","lw_heat_in_mld" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
@@ -420,6 +426,8 @@ ACCESS-OM2
  "ocean_model","pme_river_times_temp_in_mld","pme_river_times_temp_in_mld" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","eta_t_tendency_times_temp_in_mld","eta_t_tendency_times_temp_in_mld" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","eta_smoother_times_temp_in_mld","eta_smoother_times_temp_in_mld" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","eta_t_tendency_times_temp_at_mlb","eta_t_tendency_times_temp_at_mlb" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","s_surf_ent_temp","s_surf_ent_temp" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
 
 # Salt budget - standard averages:
  "ocean_model","salt_tendency_in_mld","salt_tendency_in_mld"           ,"ocean_budget_daily","all",.true.,"none",2
@@ -440,6 +448,8 @@ ACCESS-OM2
  "ocean_model","pme_river_times_salt_in_mld","pme_river_times_salt_in_mld" ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","eta_t_tendency_times_salt_in_mld","eta_t_tendency_times_salt_in_mld" ,"ocean_budget_daily","all",.true.,"none",2
  "ocean_model","eta_smoother_times_salt_in_mld","eta_smoother_times_salt_in_mld" ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","eta_t_tendency_times_salt_at_mlb","eta_t_tendency_times_salt_at_mlb" ,"ocean_budget_daily","all",.true.,"none",2
+ "ocean_model","s_surf_ent_salt","s_surf_ent_salt" ,"ocean_budget_daily","all",.true.,"none",2
 
 # Salt budget - rising averages: 
  "ocean_model","salt_tendency_in_mld","salt_tendency_in_mld"           ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
@@ -461,6 +471,8 @@ ACCESS-OM2
  "ocean_model","pme_river_times_salt_in_mld","pme_river_times_salt_in_mld" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","eta_t_tendency_times_salt_in_mld","eta_t_tendency_times_salt_in_mld" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
  "ocean_model","eta_smoother_times_salt_in_mld","eta_smoother_times_salt_in_mld" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","eta_t_tendency_times_salt_at_mlb","eta_t_tendency_times_salt_at_mlb" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
+ "ocean_model","s_surf_ent_salt","s_surf_ent_salt" ,"ocean_budget_daily_risavg","all","fwd_risavg","none",2
 
 # Snapshots to close budgets offline usnig standard averaging:
 "ocean_model", "mld", "mld", "ocean_snapshot_daily", "all", "none", "none", 2
@@ -516,6 +528,8 @@ ACCESS-OM2
 # "ocean_model","pme_river_times_temp_in_mld","pme_river_times_temp_in_mld" ,"ocean_budget_month","all",.true.,"none",2
 # "ocean_model","eta_t_tendency_times_temp_in_mld","eta_t_tendency_times_temp_in_mld" ,"ocean_budget_month","all",.true.,"none",2
 # "ocean_model","eta_smoother_times_temp_in_mld","eta_smoother_times_temp_in_mld" ,"ocean_budget_month","all",.true.,"none",2
+# "ocean_model","eta_t_tendency_times_temp_at_mlb","eta_t_tendency_times_temp_at_mlb" ,"ocean_budget_month","all",.true.,"none",2
+# "ocean_model","s_surf_ent_temp","s_surf_ent_temp" ,"ocean_budget_month","all",.true.,"none",2
 
  # Components of heat fluxes - rising averages:
 # "ocean_model","lw_heat_in_mld","lw_heat_in_mld" ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
@@ -529,6 +543,8 @@ ACCESS-OM2
 # "ocean_model","pme_river_times_temp_in_mld","pme_river_times_temp_in_mld" ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
 # "ocean_model","eta_t_tendency_times_temp_in_mld","eta_t_tendency_times_temp_in_mld" ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
 # "ocean_model","eta_smoother_times_temp_in_mld","eta_smoother_times_temp_in_mld" ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
+# "ocean_model","eta_t_tendency_times_temp_at_mlb","eta_t_tendency_times_temp_at_mlb" ,"ocean_budget_month","all","fwd_risavg","none",2
+# "ocean_model","s_surf_ent_temp","s_surf_ent_temp" ,"ocean_budget_month","all","fwd_risavg","none",2
 
 # Salt budget - standard averages:
 # "ocean_model","salt_tendency_in_mld","salt_tendency_in_mld"           ,"ocean_budget_month","all",.true.,"none",2
@@ -549,6 +565,8 @@ ACCESS-OM2
 # "ocean_model","pme_river_times_salt_in_mld","pme_river_times_salt_in_mld" ,"ocean_budget_month","all",.true.,"none",2
 # "ocean_model","eta_t_tendency_times_salt_in_mld","eta_t_tendency_times_salt_in_mld" ,"ocean_budget_month","all",.true.,"none",2
 # "ocean_model","eta_smoother_times_salt_in_mld","eta_smoother_times_salt_in_mld" ,"ocean_budget_month","all",.true.,"none",2
+# "ocean_model","eta_t_tendency_times_salt_at_mlb","eta_t_tendency_times_salt_at_mlb" ,"ocean_budget_month","all",.true.,"none",2
+# "ocean_model","s_surf_ent_salt","s_surf_ent_salt" ,"ocean_budget_month","all",.true.,"none",2
 
 # Salt budget - rising averages: 
 # "ocean_model","salt_tendency_in_mld","salt_tendency_in_mld"           ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
@@ -570,6 +588,8 @@ ACCESS-OM2
 # "ocean_model","pme_river_times_salt_in_mld","pme_river_times_salt_in_mld" ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
 # "ocean_model","eta_t_tendency_times_salt_in_mld","eta_t_tendency_times_salt_in_mld" ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
 # "ocean_model","eta_smoother_times_salt_in_mld","eta_smoother_times_salt_in_mld" ,"ocean_budget_month_risavg","all","fwd_risavg","none",2
+# "ocean_model","eta_t_tendency_times_salt_at_mlb","eta_t_tendency_times_salt_at_mlb" ,"ocean_budget_month","all","fwd_risavg","none",2
+# "ocean_model","s_surf_ent_salt","s_surf_ent_salt" ,"ocean_budget_month","all","fwd_risavg","none",2
 
 # Snapshots to close budgets offline usnig standard averaging:
 "ocean_model", "mld", "mld", "ocean_snapshot_month", "all", "none", "none", 2
