@@ -10,12 +10,17 @@ description: >-
   Model Intercomparison Program (CMIP6)'s Ocean Model Intercomparison 
   Program Version 2 (OMIP-2) under atmospheric forcing from the 
   Japanese 55-year Reanalysis - ocean forcing (JRA55-do) version 1.4. 
+  It is initialized from restart334 (1988-01-01) of the 
+  025deg_jra55_iaf_omip2_cycle6 simulation.
+
   The simulation has been extended to 2023 using JRA55-do version 
-  1.5.0 (2019) and 1.5.0.1 (2020-2023). The key innovation and raison
-  d'etre for this simulation is the implementation of online mixed 
-  layer tracer budget diagnostics for diagnosing the drivers of mixed 
-  layer temperature (particularly relevant for the analysis of Marine 
-  Heatwaves) and salinity variability.
+  1.5.0 (2019) and 1.5.0.1 (2020-2023). 
+  
+  The key innovation and raison d'etre for this simulation is the 
+  implementation of online mixed layer tracer budget diagnostics for 
+  diagnosing the drivers of mixed layer temperature (particularly 
+  relevant for the analysis of Marine Heatwaves) and salinity 
+  variability.
 
   Github repository containing the configuration used for this 
   simulation:
