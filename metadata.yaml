@@ -84,28 +84,36 @@ description: >-
   tendency or entrainment terms themselves. Instead, they can just 
   work with a simpler version of the budget that includes fewer terms.
   There are several versions of these budgets:
-  - mlt_budget_stavg_daily_online_output***.nc - daily resolution online
-    standard time averages of the mixed layer temperature budget
-  - mlt_budget_stavg_daily_online_output***_monthly_mean.nc - monthly
-    mean of the previous.
-  - mlt_budget_stavg_daily_online_output336-365_monthly_mean.ncea.nc - 
+  - mlt_budget_online_stavg/mlt_budget_stavg_daily_online_output***.nc - 
+    daily resolution online standard time averages of the mixed layer 
+    temperature budget
+  - mlt_budget_online_stavg/mlt_budget_stavg_daily_online_output***_monthly_mean.nc 
+    monthly mean of the previous.
+  - mlt_budget_online_stavg/mlt_budget_stavg_daily_online_output336-365_monthly_mean.ncea.nc
     1989-2018 climatological of the previous.
-  - mlt_budget_stavg_daily_offline_output366_monthly_mean.nc - daily 
-    resolution mixed layer temperature budget for 2019 computed using
+  - mlt_budget_offline/mlt_budget_stavg_daily_offline_output366_monthly_mean.nc 
+    daily resolution mixed layer temperature budget for 2019 computed using
     daily *offline* binning of 3D heat budget diagnostics into the 
     daily-averaged mixed layer. This is only included for evaluating 
     the errors made using offline techniques - most users should not 
     use this data.
-  - mlt_budget_stavg_monthly_offline_*** - as previous except using 
-    monthly *offline* binning of 3D heat budget diagnostics into the
-    monthly-averaged mixed layer. This is only included for evaluating 
-    the errors made using offline techniques - most users should not 
-    use this data.
-  - mlt_budget_hatavg_daily_online_output***.nc - Hat-averaged online
-    diagnostics - TBC.
-  - mls_budget_stavg_daily_online_*** - as for 
+  - mlt_budget_offline/mlt_budget_stavg_monthly_offline_*** - as previous 
+    except using monthly *offline* binning of 3D heat budget diagnostics 
+    into the monthly-averaged mixed layer. This is only included for 
+    evaluating the errors made using offline techniques - most users 
+    should not use this data.
+  - mlt_budget_online_falavg/mlt_budget_falavg_daily_online_output***.nc - 
+    Falling-average online diagnostics - these are used, along with 
+    the standard average diagnostics, to construct hat-averages of 
+    the budget for computing the budget of *time-averaged* mixing 
+    layer temperature, rather than snapshots (see resources above for
+    more discussion).
+  - mls_budget/mls_budget_stavg_daily_online_*** - as for 
     mlt_budget_stavg_daily_online except for the mixed layer salinity
-    budget.
+    budget. Also note that, as of February 2026 the salinity budget 
+    diagnostics have only gone through minimal testing.
+  Note that not all years of the daily online post processed budgets
+  have been saved on disk but they can be regenerated easily. 
 
 keywords:
 - quarter
