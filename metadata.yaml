@@ -54,7 +54,7 @@ description: >-
   Additional information associated with this rerun specific to 
   the mixed layer budget diagnostics:
   This simulation contains a different set of diagnostics to the 
-  original OMIP-2 simulation. Specifically, standard diagnostics
+  original OMIP-2 simulation. Standard diagnostics
   are significantly reduced, while additional diagnostics are 
   included to allow accurate, online diagnosis of the mixed layer
   temperature and salinity budgets. More information on these
@@ -66,7 +66,7 @@ description: >-
     be done through the COSIMA recipes repository 
     https://github.com/COSIMA/cosima-recipes. The repository 
     contains an overview of the theory, all the code required to 
-    do post-processing and a tutorial on how to analyse a Marine
+    do post-processing and a tutorial on how to analyse a marine
     heat wave event using the diagnostics.
   - Research paper: Holmes, Malan and Bladwell, Accurately 
     diagnosing mixed layer tracer budgets in a global ocean model, 
@@ -86,7 +86,7 @@ description: >-
   There are several versions of these budgets:
   - mlt_budget_online_stavg/mlt_budget_stavg_daily_online_output***.nc - 
     daily resolution online standard time averages of the mixed layer 
-    temperature budget
+    temperature budget for each year/output.
   - mlt_budget_online_stavg/mlt_budget_stavg_daily_online_output***_monthly_mean.nc 
     monthly mean of the previous.
   - mlt_budget_online_stavg/mlt_budget_stavg_daily_online_output336-365_monthly_mean.ncea.nc
@@ -110,10 +110,10 @@ description: >-
     more discussion).
   - mls_budget/mls_budget_stavg_daily_online_*** - as for 
     mlt_budget_stavg_daily_online except for the mixed layer salinity
-    budget. Also note that, as of February 2026 the salinity budget 
-    diagnostics have only gone through minimal testing.
+    budget. Note that, as of February 2026, the salinity budget diagnostics 
+    have only gone through minimal testing.
   Note that not all years of the daily online post processed budgets
-  have been saved on disk but they can be regenerated easily. 
+  have been saved on disk but they can be regenerated easily.
 
 keywords:
 - quarter
