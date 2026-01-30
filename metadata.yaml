@@ -114,6 +114,9 @@ description: >-
     have only gone through minimal testing.
   Note that not all years of the daily online post processed budgets
   have been saved on disk but they can be regenerated easily.
+  Also included are marine heat wave mean and 90th percentile (threshold) 
+  climatologies calculated following Hobday et al. (2016) using a fixed 
+  baseline 1989-2018 (om2_025_MLT_clim.nc and om2_025_MLT_thresh.nc).
 
 keywords:
 - quarter
