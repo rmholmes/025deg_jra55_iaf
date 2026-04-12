@@ -17,7 +17,7 @@ ACCESS-OM2
 "ocean_budget_daily",         24,  "hours",  1, "days", "time",
 "ocean_budget_daily_3d",      24,  "hours",  1, "days", "time",
 "ocean_snapshot_daily",       24,  "hours",  1, "days", "time"
-"ocean_hourly",                24,  "hours",  1, "days", "time",
+"ocean_hourly",                1,  "hours",  1, "days", "time",
 "ocean_budget_hourly",         1,  "hours",  1, "days", "time",
 "ocean_budget_hourly_3d",      1,  "hours",  1, "days", "time",
 "ocean_snapshot_hourly",       1,  "hours",  1, "days", "time"
@@ -64,6 +64,7 @@ ACCESS-OM2
  "ocean_model", "temp_in_mld", "temp_in_mld", "ocean_daily", "all", .true., "none", 2
  "ocean_model", "temp_at_mlb", "temp_at_mlb", "ocean_daily", "all", .true., "none", 2
  "ocean_model","diff_cbt_t","diff_cbt_t",    "ocean_daily","all",.true.,"none",2
+ "ocean_model","temp","temp",                "ocean_daily","all",.true.,"none",2
 
 # Components of surface heat flux:
  "ocean_model","lw_heat","lw_heat" ,"ocean_daily","all",.true.,"none",2
@@ -149,6 +150,7 @@ ACCESS-OM2
  "ocean_model", "temp_in_mld", "temp_in_mld", "ocean_hourly", "all", .true., "none", 2
  "ocean_model", "temp_at_mlb", "temp_at_mlb", "ocean_hourly", "all", .true., "none", 2
  "ocean_model","diff_cbt_t","diff_cbt_t",    "ocean_hourly","all",.true.,"none",2
+ "ocean_model","temp","temp",                "ocean_hourly","all",.true.,"none",2
 
 # Components of surface heat flux:
  "ocean_model","lw_heat","lw_heat" ,"ocean_hourly","all",.true.,"none",2
