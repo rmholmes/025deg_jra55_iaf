@@ -21,6 +21,7 @@ ACCESS-OM2
 "ocean_budget_hourly",         1,  "hours",  1, "days", "time",
 "ocean_budget_hourly_3d",      1,  "hours",  1, "days", "time",
 "ocean_snapshot_hourly",       1,  "hours",  1, "days", "time"
+"ocean_timestep",           1200,  "seconds",  1, "days", "time",
 
 #==========================================================================
 # Static diagnostics (including Griffies et al. Table G1)
@@ -160,6 +161,11 @@ ACCESS-OM2
 # "ocean_model","net_sfc_heating","net_sfc_heating"                              ,"ocean_hourly","all",.true.,"none",2
 # "ocean_model", "frazil_3d_int_z", "frazil_3d_int_z", "ocean_hourly", "all", "average", "none", 2
  "ocean_model", "pme_river", "pme_river", "ocean_hourly", "all", "average", "none", 2
+
+ "ocean_model","swflx","swflx" ,"ocean_timestep","all",.true.,"none",2
+ "ocean_model", "mld", "mld", "ocean_timestep", "all", .true., "none", 2
+ "ocean_model", "temp_in_mld", "temp_in_mld", "ocean_timestep", "all", .true., "none", 2
+ "ocean_model", "temp_at_mlb", "temp_at_mlb", "ocean_timestep", "all", .true., "none", 2
 
 #==========================================================================
 # 3D Heat and salt budgets daily averages
