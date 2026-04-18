@@ -13,14 +13,14 @@ ACCESS-OM2
 
 # output files
 "ocean_grid",                 -1,  "months", 1, "days", "time",
-"ocean_daily",                24,  "hours",  1, "days", "time",
-"ocean_budget_daily",         24,  "hours",  1, "days", "time",
-"ocean_budget_daily_3d",      24,  "hours",  1, "days", "time",
-"ocean_snapshot_daily",       24,  "hours",  1, "days", "time"
-"ocean_hourly",                1,  "hours",  1, "days", "time",
-"ocean_budget_hourly",         1,  "hours",  1, "days", "time",
-"ocean_budget_hourly_3d",      1,  "hours",  1, "days", "time",
-"ocean_snapshot_hourly",       1,  "hours",  1, "days", "time"
+#"ocean_daily",                24,  "hours",  1, "days", "time",
+#"ocean_budget_daily",         24,  "hours",  1, "days", "time",
+#"ocean_budget_daily_3d",      24,  "hours",  1, "days", "time",
+#"ocean_snapshot_daily",       24,  "hours",  1, "days", "time"
+#"ocean_hourly",                1,  "hours",  1, "days", "time",
+#"ocean_budget_hourly",         1,  "hours",  1, "days", "time",
+#"ocean_budget_hourly_3d",      1,  "hours",  1, "days", "time",
+#"ocean_snapshot_hourly",       1,  "hours",  1, "days", "time"
 "ocean_timestep",           1200,  "seconds",  1, "days", "time",
 
 #==========================================================================
