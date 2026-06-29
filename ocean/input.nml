@@ -466,6 +466,7 @@
     diag_step         = 4320
     do_bitwise_exact_sum = .false.
     tracer_conserve_days = 30.0
+    buoyancy_crit = 0.000142
 /
 
 &ocean_tracer_nml
