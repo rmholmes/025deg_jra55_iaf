@@ -70,6 +70,8 @@ platform:
 userscripts:
     error: resub.sh
     run: rm -f resubmit.count
+storage:
+    gdata: av17
 
 # DANGER! Do not uncomment this without checking the script is syncing to the correct location!
 # postscript: sync_data.sh
